@@ -1,0 +1,20 @@
+{
+  "name": "aperture_academy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "pug ./src/pug -o build --pretty --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/cli": "^7.10.1",
+    "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2",
+    "pug-cli": "^1.0.0-alpha6",
+    "sass": "^1.26.8"
+  }
+}
