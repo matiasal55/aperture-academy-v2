@@ -3,17 +3,47 @@
   <head>
     <title>Aperture Academy</title>
     <meta name="viewport" content="width=device-width, user-scalable=no"/>
-    <link rel="stylesheet" src="./css/undefined.css"/>
-    <script src="./js/undefined.js"></script>
+    <link rel="stylesheet" src="./css/rocket.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous"/>
+    <script src="./js/home.js"></script>
   </head>
   <body>
-    <h1>Hola mundo 2</h1>
-    <div class="menu">
-      <div class="menu-items">Home</div>
-      <div class="menu-items">Cursos</div>
-      <div class="menu-items">Gift Card</div>
-      <div class="menu-items">Inscripción</div>
-      <div class="menu-items">Contacto</div>
-    </div>
+    <header>
+      <div class="logo"><img src="./img/logo.png"/></div>
+      <div class="buscador">
+        <input type="text" id="datoabuscar"/>
+        <button type="submit">Buscar</button>
+      </div>
+      <div class="carrito"><span>0</span><img src="./img/shopping-negro.png"/></div>
+    </header>
+    <nav>
+      <div class="menu">
+        <div class="menu-items"> <a href="./index.html">Home</a></div>
+        <div class="menu-items"><a href="./cursos.html">Cursos</a></div>
+        <div class="menu-items"><a href="./calendario.html">Calendario</a></div>
+        <div class="menu-items"><a href="./giftcard.html">Gift Card</a></div>
+        <div class="menu-items"><a href="./inscripcion.html">Inscripción</a></div>
+        <div class="menu-items"><a href="./contacto.html">Contacto</a></div>
+      </div>
+    </nav>
+    <section>
+      <h1>Hola</h1>
+    </section>
+    <footer>
+      <div class="copyright"><i class="far fa-copyright">2020. Academy. Todos los derechos reservados.</i></div>
+      <div class="navfooter">   
+        <div class="menu-items"> <a href="./index.html">Home</a></div>
+        <div class="menu-items"><a href="./cursos.html">Cursos</a></div>
+        <div class="menu-items"><a href="./calendario.html">Calendario</a></div>
+        <div class="menu-items"><a href="./giftcard.html">Gift Card</a></div>
+        <div class="menu-items"><a href="./inscripcion.html">Inscripción</a></div>
+        <div class="menu-items"><a href="./contacto.html">Contacto</a></div>
+      </div>
+      <div class="redes">
+        <div><i class="fab fa-facebook-square"></i><a href="#">Seguinos en Facebook</a></div>
+        <div><i class="fab fa-twitter-square"></i><a href="#">Seguinos en Twitter</a></div>
+        <div><i class="fab fa-instagram"></i><a href="#">Seguinos en Instagram</a></div>
+      </div>
+    </footer>
   </body>
 </html>
