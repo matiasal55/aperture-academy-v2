@@ -1,0 +1,16 @@
+* {
+  font-family: "Open Sans", sans-serif;
+}
+
+header .header,
+nav .menu,
+footer .footer {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+@import "header";
+@import "menu";
+@import "footer";

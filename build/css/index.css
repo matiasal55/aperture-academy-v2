@@ -1,0 +1,58 @@
+* {
+  font-family: "Open Sans", sans-serif;
+}
+
+header .header,
+nav .menu,
+footer .footer {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+header {
+  background-color: blue;
+  padding: 30px;
+}
+
+.header {
+  align-items: center;
+}
+.header .logo img {
+  min-width: 50px;
+  max-width: 200px;
+}
+.header .carrito img {
+  width: 50px;
+}
+
+nav {
+  background-color: skyblue;
+}
+nav .menu {
+  justify-content: initial;
+}
+nav .menu-items {
+  padding: 20px;
+}
+nav .menu-items:hover {
+  background-color: white;
+}
+nav .menu-items a {
+  color: black;
+}
+
+footer {
+  background-color: black;
+}
+footer .footer {
+  padding: 30px;
+  align-items: center;
+  color: white;
+}
+footer .footer a {
+  color: white;
+}
+
+/*# sourceMappingURL=index.css.map */

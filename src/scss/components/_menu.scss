@@ -1,0 +1,18 @@
+nav {
+  background-color: skyblue;
+  .menu {
+    justify-content: initial;
+
+    &-items {
+      padding: 20px;
+
+      &:hover {
+        background-color: white;
+      }
+
+      a {
+        color: black;
+      }
+    }
+  }
+}

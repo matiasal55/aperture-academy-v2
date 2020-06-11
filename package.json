@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "pug src/pug/^components --output build --pretty --watch"
+    "pug": "pug --watch --pretty src/pug/pages --out build",
+    "sass": "sass src/scss:build/css --watch"
   },
   "keywords": [],
   "author": "",

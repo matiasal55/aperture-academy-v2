@@ -1,0 +1,18 @@
+header {
+  background-color: blue;
+  padding: 30px;
+}
+
+.header {
+  align-items: center;
+  .logo img {
+    min-width: 50px;
+    max-width: 200px;
+  }
+
+  .carrito {
+    img {
+      width: 50px;
+    }
+  }
+}
