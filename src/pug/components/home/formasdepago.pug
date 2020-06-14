@@ -1,0 +1,8 @@
+- const formas=["mastercard","mercadopago","paypal","visa","bitcoin"];
+
+.tituloSeccion
+    h1 Formas de Pago
+.formas-de-pago
+    each forma in formas
+        .img-forma
+            img(src=`./img/${forma}.jpg`)

@@ -1,0 +1,22 @@
+- const curso1= {titulo: "Docker", horas: 25};
+
+- const curso2= {titulo: "Java", horas: 52};
+
+- const curso3= {titulo: "Python", horas: 25};
+
+- const cursos=[curso1, curso2, curso3];
+
+.tituloSeccion
+    h1 Cursos Destacados
+.cards
+    each curso in cursos
+        div
+            .imagen
+                img(src=`./img/${curso.titulo}.jpg`)
+            .titulo
+                h1 #{curso.titulo}
+            .horas
+                h4 #{curso.horas}hs
+            .detalles
+                input(type="button" value="Buscar")
+                a(href=`./cursos/${curso.titulo}.html`)
