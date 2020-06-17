@@ -1,12 +1,18 @@
+$letras: white;
+
 footer {
   background-color: black;
   .footer {
     padding: 30px;
     align-items: center;
 
-    color: white;
+    color: $letras;
     a {
-      color: white;
+      color: $letras;
     }
   }
+}
+
+.copyright i {
+  color: $letras;
 }

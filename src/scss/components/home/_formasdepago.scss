@@ -1,0 +1,14 @@
+@import "../mixins";
+
+.formas-de-pago {
+  @include formatoElementosHome;
+  justify-content: center;
+
+  & > div {
+    background: none;
+  }
+}
+.img-forma img {
+  max-width: 100px;
+  margin: 0px 50px;
+}

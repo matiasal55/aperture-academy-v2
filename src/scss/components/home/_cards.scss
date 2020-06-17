@@ -1,0 +1,14 @@
+@import "../mixins";
+
+.cards {
+  @include formatoElementosHome;
+
+  & > div {
+    border: 10px solid black;
+
+    .imagen img {
+      max-width: 250px;
+      max-height: 250px;
+    }
+  }
+}
