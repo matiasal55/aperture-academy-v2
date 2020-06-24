@@ -2,3 +2,22 @@
 @import "components/home/pasos";
 @import "components/home/cards";
 @import "components/home/formasdepago";
+
+@media (max-device-width: $responsive1) {
+  .pasos,
+  .cards,
+  .footer {
+    flex-direction: column;
+  }
+
+  .formas-de-pago {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .img-forma img {
+    max-width: 75px;
+    margin-left: 30px;
+    margin-bottom: 30px;
+  }
+}

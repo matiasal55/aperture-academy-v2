@@ -1,0 +1,51 @@
+$responsive1: 768px;
+
+@media (max-device-width: $responsive1) {
+  header {
+    padding: 10px;
+  }
+
+  .header {
+    min-width: 100%;
+
+    .logo img {
+      max-width: 150px;
+    }
+
+    .buscador {
+      display: none;
+    }
+
+    .responsive {
+      display: block;
+    }
+
+    .carrito img {
+      max-width: 30px;
+    }
+  }
+
+  .menu {
+    flex-direction: column;
+  }
+
+  nav {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    left: -100%;
+    z-index: 200;
+    text-align: center;
+  }
+
+  .menu-responsive {
+    left: 0;
+  }
+
+  .footer {
+    text-align: center;
+    & div {
+      margin: 10px 0px;
+    }
+  }
+}

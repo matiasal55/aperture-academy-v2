@@ -8,6 +8,10 @@ header {
 
 .header {
   align-items: center;
+
+  .responsive {
+    display: none;
+  }
   .logo img {
     min-width: 50px;
     max-width: 200px;
