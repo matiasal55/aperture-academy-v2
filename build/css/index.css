@@ -44,6 +44,7 @@ nav .menu {
 }
 nav .menu-items {
   padding: 20px;
+  display: block;
 }
 nav .menu-items:hover {
   background-color: white;
@@ -51,20 +52,38 @@ nav .menu-items:hover {
 nav .menu-items a {
   color: black;
 }
+nav .menu-items .cursos .cursos-items {
+  display: none;
+  position: absolute;
+  left: -20;
+  margin: 20px 0px;
+  z-index: 10;
+  padding: 20px;
+  background-color: red;
+}
+nav .menu-items .cursos:hover > .cursos-items {
+  display: block;
+}
+
+.buscador-responsive {
+  display: none;
+}
 
 footer {
   background-color: black;
 }
 footer .footer {
-  padding: 30px;
+  justify-content: space-between;
   align-items: center;
   color: white;
 }
 footer .footer a {
   color: white;
 }
-
-.copyright i {
+footer .footer .navfooter .menu-items .cursos div {
+  display: none;
+}
+footer .copyright i {
   color: white;
 }
 
@@ -91,19 +110,29 @@ footer .footer a {
 
   .menu {
     flex-direction: column;
+    min-width: 100%;
+  }
+  .menu .menu-items {
+    padding: 20px 0px;
+  }
+  .menu .menu-items .cursos .cursos-items {
+    visibility: hidden;
   }
 
   nav {
     width: 100vw;
     height: 100vh;
     position: fixed;
-    left: -100%;
     z-index: 200;
     text-align: center;
   }
 
   .menu-responsive {
     left: 0;
+  }
+
+  .buscador-responsive {
+    display: block;
   }
 
   .footer {
@@ -185,8 +214,8 @@ footer .footer a {
 }
 
 .img-forma img {
+  padding: 30px;
   max-width: 100px;
-  margin: 0px 50px;
 }
 
 @media (max-device-width: 768px) {

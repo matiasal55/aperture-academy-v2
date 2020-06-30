@@ -27,19 +27,32 @@ $responsive1: 768px;
 
   .menu {
     flex-direction: column;
+    min-width: 100%;
+
+    .menu-items {
+      padding: 20px 0px;
+
+      .cursos .cursos-items {
+        visibility: hidden;
+      }
+    }
   }
 
   nav {
     width: 100vw;
     height: 100vh;
     position: fixed;
-    left: -100%;
+    // left: -100%;
     z-index: 200;
     text-align: center;
   }
 
   .menu-responsive {
     left: 0;
+  }
+
+  .buscador-responsive {
+    display: block;
   }
 
   .footer {

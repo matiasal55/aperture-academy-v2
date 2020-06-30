@@ -3,16 +3,19 @@ $letras: white;
 footer {
   background-color: black;
   .footer {
-    padding: 30px;
+    justify-content: space-between;
     align-items: center;
-
     color: $letras;
     a {
       color: $letras;
     }
-  }
-}
 
-.copyright i {
-  color: $letras;
+    .navfooter .menu-items .cursos div {
+      display: none;
+    }
+  }
+
+  .copyright i {
+    color: $letras;
+  }
 }
