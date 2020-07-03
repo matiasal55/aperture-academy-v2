@@ -1,3 +1,5 @@
+@import "./mixins";
+
 * {
   font-family: "Open Sans", sans-serif;
   text-decoration: none;
@@ -17,4 +19,4 @@ footer .footer {
 @import "header";
 @import "menu";
 @import "footer";
-@import "responsive";
+@import "./responsive";

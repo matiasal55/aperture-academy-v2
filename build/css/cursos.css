@@ -147,83 +147,40 @@ footer .copyright i {
     display: none;
   }
 }
-.pasos {
+.cursos-lista {
+  width: 80%;
+  margin: 0 auto;
   display: flex;
-  justify-content: space-around;
-  background-color: #d3d3d3;
-  padding: 30px 0px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
-.pasos > div {
-  background-color: black;
-  color: white;
-  text-align: center;
-}
-.pasos div {
-  padding: 30px 10px;
-}
-
-.cards {
+.cursos-lista div {
   display: flex;
-  justify-content: space-around;
-  background-color: #d3d3d3;
-  padding: 30px 0px;
-}
-.cards > div {
-  background-color: black;
-  color: white;
-  text-align: center;
-}
-.cards > div {
-  border: 10px solid black;
-}
-.cards > div .imagen img {
-  max-width: 250px;
-  max-height: 250px;
-}
-
-.formas-de-pago {
-  display: flex;
-  justify-content: space-around;
-  background-color: #d3d3d3;
-  padding: 30px 0px;
-  justify-content: center;
-}
-.formas-de-pago > div {
-  background-color: black;
-  color: white;
-  text-align: center;
-}
-.formas-de-pago > div {
-  background: none;
-}
-
-.img-forma img {
-  padding: 30px;
-  max-width: 100px;
-}
-
-.tituloSeccion {
+  margin: 20px;
+  align-self: center;
   background-color: #808080;
-  color: black;
-  text-align: center;
-  padding: 30px 0px;
+}
+.cursos-lista div .img img {
+  width: 150px;
+}
+.cursos-lista div .detalles {
+  flex-direction: column;
 }
 
 @media (max-device-width: 768px) {
-  .pasos,
-.cards,
-.footer {
-    flex-direction: column;
+  .cursos-lista {
+    margin: 10px 0px;
+    display: grid;
+    grid-template-columns: 100%;
+    width: 100vw;
   }
-
-  .formas-de-pago {
-    display: flex;
-    flex-wrap: wrap;
+  .cursos-lista div {
+    margin: 10px 0px;
+    padding: 0px 10px;
   }
-
-  .img-forma img {
-    max-width: 75px;
+  .cursos-lista div .img img {
+    max-width: 100px;
   }
 }
 
-/*# sourceMappingURL=index.css.map */
+/*# sourceMappingURL=cursos.css.map */

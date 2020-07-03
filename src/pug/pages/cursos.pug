@@ -1,1 +1,8 @@
 extends ../components/master
+
+block estilo
+    - estilos= "cursos"
+    - js="cursos"
+block content
+    section
+        include ../components/cursos/lista

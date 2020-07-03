@@ -1,0 +1,42 @@
+@import "./components/master";
+@import "./components/mixins";
+
+.cursos-lista {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  div {
+    display: flex;
+    margin: 20px;
+    align-self: center;
+    background-color: $fondo2;
+    .img {
+      img {
+        width: 150px;
+      }
+    }
+    .detalles {
+      flex-direction: column;
+    }
+  }
+}
+
+@media (max-device-width: $responsive1) {
+  .cursos-lista {
+    margin: 10px 0px;
+    display: grid;
+    grid-template-columns: 100%;
+    width: 100vw;
+
+    div {
+      margin: 10px 0px;
+      padding: 0px 10px;
+
+      .img img {
+        max-width: 100px;
+      }
+    }
+  }
+}
