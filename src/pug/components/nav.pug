@@ -1,22 +1,24 @@
 .menu-items 
-    a(href="./index.html") Home
+    a(href=`${direccion}/index.html`) Home
+if !footer
+    .menu-items
+        .cursos
+            .cursos-titulo
+                a(href="#") Cursos
+            .cursos-items
+                div HTML
+                div Docker
+                div Java
 .menu-items
-    .cursos
-        .cursos-titulo
-            a(href="#") Cursos
-        .cursos-items
-            div HTML
-            div Docker
-            div Java
+    a(href=`${direccion}/calendario.html`) Calendario
 .menu-items
-    a(href="./calendario.html") Calendario
+    a(href=`${direccion}./giftcard.html`) Gift Card
 .menu-items
-    a(href="./giftcard.html") Gift Card
+    a(href=`${direccion}./inscripcion.html`) Inscripción
 .menu-items
-    a(href="./inscripcion.html") Inscripción
-.menu-items
-    a(href="./contacto.html") Contacto
-.menu-items
-    .buscador-responsive
-            input(type="text" id="datoabuscar")
-            button(type="submit") Buscar
+    a(href=`${direccion}/contacto.html`) Contacto
+if menu
+    .menu-items
+        .buscador-responsive
+                input(type="text" id="datoabuscar")
+                button(type="submit") Buscar

@@ -1,0 +1,11 @@
+extends ../../components/master
+block estilo
+    - estilos="cursos-detalles"
+    - js="cursos-detalles"
+    - direccion=".."
+block content
+    section
+    include ../../components/lista-de-cursos
+    - let curso=docker
+        include ../../components/cursos/detalles
+        

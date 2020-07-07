@@ -1,15 +1,18 @@
 - let estilos;
 - let js;
+- let direccion;
+- let menu=true;
+- let footer=false;
 
 html
     head
         title Aperture Academy
         meta(name="viewport" content="width=device-width, user-scalable=no")
         block estilo
-        link(rel="stylesheet" href=`./css/${estilos}.css`)
+        link(rel="stylesheet" href=`${direccion}/css/${estilos}.css`)
         link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous")
         link(href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet")
-        script(src=`./js/${js}.js`)
+        script(src=`${direccion}/js/${js}.js`)
     body
         include header
         nav

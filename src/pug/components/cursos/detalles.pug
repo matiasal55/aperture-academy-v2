@@ -1,0 +1,27 @@
+.detalles
+    div
+        img(src=`../img/cursos/${curso.titulo}.png`)
+    div
+        div
+            h1 Curso de #{curso.titulo}
+            h2 Valor: $#{curso.precio}
+            h2 Duración del curso: #{curso.horas}hs.
+            h2 Requisitos: #{curso.requisitos}
+            input(type="button" value="Inscribirse")
+        div
+            h1 Contenidos por clase
+            each detalle in curso.contenidos
+                h1 #{detalle[0]}
+                each clases in detalle[1]
+                    h2 #{clases}
+    .profesor
+        div
+            h1 DOCENTE
+        div
+            img(src=`../img/cursos/${curso.profesor.nombre}.jpg`)
+        div
+            h1 #{curso.profesor.nombre}
+            p
+                - for(let i=1;i<=curso.profesor.estrellas;i++)
+                    <i class="fas fa-star"></i>
+            p #{curso.profesor.descripcion}
