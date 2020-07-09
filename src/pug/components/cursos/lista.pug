@@ -1,19 +1,23 @@
-- const html={titulo: "HTML", detalles:"Accede al mejor curso de HTML.", cantDeClases:20, precio: 1200};
-- const javascript={titulo: "Javascript", detalles:"Accede al mejor curso de Javascript.", cantDeClases:20, precio: 1200};
-- const php={titulo: "PHP", detalles:"Accede al mejor curso de PHP. Lo mejor de lo mejor de lo realmente mejor", cantDeClases:20, precio: 1200};
-- const docker={titulo: "Docker", detalles:"Accede al mejor curso de Docker.", cantDeClases:20, precio: 1200};
-- const nodeJS={titulo: "NodeJS", detalles:"Accede al mejor curso de NodeJS.", cantDeClases:20, precio: 1200};
-- const sass={titulo: "Sass", detalles:"Accede al mejor curso de Sass.", cantDeClases:20, precio: 1200};
-- const typescript={titulo: "Typescript", detalles:"Accede al mejor curso de Typescript.", cantDeClases:20, precio: 1200};
-- const cursos=[html,javascript,php,docker,nodeJS, sass, typescript];
+include ../lista-de-cursos
+- const cursos=[html,docker,java,javascript,golang];
+
+
 
 .cursos-lista
     each curso in cursos
         div
+           
             .img
                 img(src=`./img/cursos/${curso.titulo.toLowerCase()}.png`)
             .detalles
-                h1 Curso de #{curso.titulo}
-                p Detalles: #{curso.detalles}
-                p Cantidad de clases: #{curso.cantDeClases}
-                p Precio: #{curso.precio}
+                h1
+                    a(href=`./cursos/${curso.titulo.toLowerCase()}.html`) Curso de #{curso.titulo}
+                p 
+                    b Detalles: 
+                    span #{curso.detalles}
+                p 
+                    b Cantidad de horas: 
+                    span #{curso.horas}
+                p
+                    b Precio: 
+                    span #{curso.precio}

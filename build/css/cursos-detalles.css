@@ -5,6 +5,10 @@
   margin: 0;
 }
 
+body {
+  background-color: #d3d3d3;
+}
+
 header .header,
 nav .menu,
 footer .footer {
@@ -76,12 +80,10 @@ footer .footer {
   justify-content: space-between;
   align-items: center;
   color: white;
+  padding: 30px 0px;
 }
 footer .footer a {
   color: white;
-}
-footer .footer .navfooter .menu-items .cursos div {
-  display: none;
 }
 footer .copyright i {
   color: white;
@@ -143,8 +145,75 @@ footer .copyright i {
   .footer div {
     margin: 10px 0px;
   }
-  .footer .navfooter .menu-items .buscador-responsive {
-    display: none;
+}
+.detalles {
+  width: 40%;
+  margin: 0 auto;
+  padding: 30px 0px;
+  display: flex;
+  justify-content: center;
+}
+.detalles .img img {
+  max-width: 200px;
+  margin-right: 30px;
+}
+.detalles .principal {
+  margin-bottom: 30px;
+}
+.detalles .contenidos h1 {
+  margin-bottom: 10px;
+}
+.detalles .contenidos div {
+  border: 3px solid #808080;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.detalles .contenidos div i {
+  cursor: pointer;
+  font-size: 24px;
+}
+.detalles .contenidos ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+.detalles input {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.profesor {
+  width: 80%;
+  margin: 30px auto;
+  border: 5px solid black;
+  padding: 5px 20px;
+}
+.profesor div h2 {
+  margin-bottom: 10px;
+}
+.profesor div img {
+  width: 150px;
+  margin-right: 10px;
+}
+.profesor .descripcion {
+  display: flex;
+}
+.profesor .descripcion div p i {
+  color: goldenrod;
+  margin-bottom: 10px;
+}
+
+@media (max-device-width: 768px) {
+  .descripcion,
+.detalles {
+    flex-direction: column;
+  }
+
+  .detalles {
+    width: 90vw;
   }
 }
 

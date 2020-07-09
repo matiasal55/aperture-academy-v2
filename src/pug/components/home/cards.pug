@@ -1,6 +1,6 @@
 include ../lista-de-cursos
 
-- const cursos=[docker, java, python];
+- const cursos=[docker, java, html];
 
 .tituloSeccion
     h1 Cursos Destacados
@@ -8,7 +8,7 @@ include ../lista-de-cursos
     each curso in cursos
         div
             .imagen
-                img(src=`./img/${curso.titulo}.jpg`)
+                img(src=`./img/cursos/${curso.titulo}.png`)
             .titulo
                 h1 #{curso.titulo}
             .horas

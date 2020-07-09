@@ -5,6 +5,10 @@
   margin: 0;
 }
 
+body {
+  background-color: #d3d3d3;
+}
+
 header .header,
 nav .menu,
 footer .footer {
@@ -76,12 +80,10 @@ footer .footer {
   justify-content: space-between;
   align-items: center;
   color: white;
+  padding: 30px 0px;
 }
 footer .footer a {
   color: white;
-}
-footer .footer .navfooter .menu-items .cursos div {
-  display: none;
 }
 footer .copyright i {
   color: white;
@@ -143,14 +145,10 @@ footer .copyright i {
   .footer div {
     margin: 10px 0px;
   }
-  .footer .navfooter .menu-items .buscador-responsive {
-    display: none;
-  }
 }
 .pasos {
   display: flex;
   justify-content: space-around;
-  background-color: #d3d3d3;
   padding: 30px 0px;
 }
 .pasos > div {
@@ -165,7 +163,6 @@ footer .copyright i {
 .cards {
   display: flex;
   justify-content: space-around;
-  background-color: #d3d3d3;
   padding: 30px 0px;
 }
 .cards > div {
@@ -184,7 +181,6 @@ footer .copyright i {
 .formas-de-pago {
   display: flex;
   justify-content: space-around;
-  background-color: #d3d3d3;
   padding: 30px 0px;
   justify-content: center;
 }

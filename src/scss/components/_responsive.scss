@@ -1,5 +1,3 @@
-$responsive1: 768px;
-
 @media (max-device-width: $responsive1) {
   header {
     padding: 10px;
@@ -60,10 +58,6 @@ $responsive1: 768px;
     flex-direction: column;
     & div {
       margin: 10px 0px;
-    }
-
-    .navfooter .menu-items .buscador-responsive {
-      display: none;
     }
   }
 }

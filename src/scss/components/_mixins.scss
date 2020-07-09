@@ -1,9 +1,9 @@
 $fondo1: #d3d3d3;
 $fondo2: #808080;
+$responsive1: 768px;
 @mixin formatoElementosHome {
   display: flex;
   justify-content: space-around;
-  background-color: $fondo1;
   padding: 30px 0px;
 
   & > div {

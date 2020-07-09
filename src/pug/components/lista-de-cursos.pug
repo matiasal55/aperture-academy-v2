@@ -1,8 +1,169 @@
-- const alexisSanchez={nombre:"Alexis Sanchez",descripcion:"Gran profesor", estrellas: 5}
+- const antonioMartinSierra={nombre: "Antonio Martin Sierra", descripcion:"Soy programador Java Certificado y tengo más de 20 años de experiencia como formador en tecnologías Java, Java EE y Android. He impartido numerosos cursos para Empresas y Centros de formación, tanto en modalidad presencial como on-line. Entre mis principales clientes están IBM, Telefónica, Accenture y Core Networks.", estrellas: 5}
+- const andresSosaArevalo={nombre: "Andres Sosa Arevalo", descripcion:"Hola a todos, soy estudiante de derecho de la universidad Sergio Arboleda de Colombia, tambien soy desarrollador Web, hice trabajos remotos en la plataforma de Workana, tambien he ayudado en linea a muchos estudiantes de la plataforma de Next U para alcanzar sus certificaciones en tecnologia digital en campos de desarrollo web y marketing digital.", estrellas: 4}
+- const ricardoGonzalezGomez={nombre:"Ricardo Gonzalez Gomez", descripcion: "Encuentro en Linux mi pasatiempo y diversión. Soy amante de las tecnologías open source y esto me ha llevado a integrar distintas herramientas proporcionando soluciones ágiles con Docker, Jenkins, Ansible, Git, etc.",estrellas: 5}
+- const adrianHeras={nombre:"Adrian Heras",descripcion:"Seis años de experiencia en desarrollo web. Apasionado de las nuevas tecnologías y en especial del ecosistema de javascript. Creador de contenido audiovisual formativo relacionado con el desarrollo web full-stack.", estrellas: 4}
+- const pabloTilotta={nombre:"Pablo Tilotta",descripcion:"Desde la experiencia en el Análisis de Sistemas, me he destacado en brindar soluciones a sectores complejos como Administración, Marketing, Tesorería, Logística y Distribución, Recursos Humanos con mas de 2000 soluciones y sistemas (no siempre la solución es un sistema o programa) a lo largo de 30 años ininterrumpidos.",estrellas:4}
 
-- const docker= {titulo: "Docker", horas: 25, contenidos: [["Introducción",["Tema 1","Tema 2"]],["Previa",["Tema 3", "Tema 4"]]], profesor: alexisSanchez};
+- 
+    const html= {
+        titulo: "HTML",
+        detalles: "Aprende a desarrollar tus propias plantillas Web desde cero, usando los últimos estándares de Html 5",
+        precio: 2500, 
+        horas: 4, 
+        requisitos:"El curso empieza desde 0, no necesitas ningún conocimiento previo.", 
+        contenidos: [
+            {
+            titulo: "Comenzando en HTML",
+            tematicas: ["Definición de Html", "¿Qué editor usar?","¿Qué es un atributo?","La etiqueta DOCTYPE","El atributo CHARSET"]
+            },
+            {
+            titulo: "Textos, anclas e imágenes",
+            tematicas: ["Encabezados y párrafos","Negrita,énfasis,cursiva,span y salto de línea","Anclas","Imagenes"]
+            },
+            {
+            titulo: "Listas, tablas y contenidos",
+            tematicas: ["Listas","Tablas","Comentarios"]
+            },
+            {
+            titulo: "Formularios",
+            tematicas: ["Introducción a formularios e inputs","La etiqueta select","El atributo placeholder y required","El checkbox","El textarea","El input datepicker y el colorpicker","El input password","El input email y el input file","El input radio","El input number y el input range"]
+            },
+            {
+            titulo: "HTML5",
+            tematicas: ["Etiqueta Header y Nav","Etiqueta Main, Section y Div","Etiqueta Article y Aside","Etiqueta Footer"]
+            }
+            ], 
+        profesor: andresSosaArevalo
+        };
 
-- const java= {titulo: "Java", horas: 52};
+- 
+    const docker= {
+        titulo: "Docker",
+        detalles:"Conviértete en un Docker DevOps Master aprendiendo de cero la tecnología que está cambiando el mundo con contenedores! ", 
+        precio: 3500, 
+        horas: 9, 
+        requisitos:"Se recomienda tener una noción básica de linux.", 
+        contenidos: [
+            {
+            titulo: "Introducción",
+            tematicas: ["¿Qué es Docker?", "Arquitectura de Docker","¿Qué es una imagen?","¿Qué es un contenedor?","Contenedores VS Máquinas Virtuales","Instalación"]
+            },
+            {
+            titulo: "Docker Images",
+            tematicas: ["Introducción","Dockerfile"]
+            },
+            {
+            titulo: "Containers",
+            tematicas: ["Introducción","Listar / Mapear puertos","Iniciar / Reiniciar / Detener","Variables de entorno","Crear un contenedor MySQL, Jenkins, Mongo y PostgreSQL","Administrar usuarios","Limitar recursos a un contenedor","Convierte un contenedor en una imagen"]
+            },
+            {
+            titulo: "Volumes",
+            tematicas:["¿Por qué son importantes los volúmenes?","Volúmenes de host y anónimos - Caso práctico MySQL","Comprende a fondo la instrucción VOLUME de un Dockerfile","Dangling volumes","Comparte volúmenes entre uno o más contenedores"]
+            },
+            {
+            titulo: "Network",
+            tematicas:["¿Cuál es la red por defecto?","Crear una red definida por el usuario","Inspeccionar redes","Agregar contenedores a una red distinta a la por defecto","Conectar contenedores en la misma red y en otra distinta","Eliminar redes"]
+            },
+            {
+            titulo: "Compose",
+            tematicas: ["Primeros pasos en Compose","Variables de entorno, redes y volúmenes en Compose","Sobreescribe el CMD de un contenedor con Compose","Limitar recursos en contenedores (Compose v2)","Politica de reinicio de contenedores"]
+            }
+            ], 
+        profesor: ricardoGonzalezGomez
+        };
 
-- const python= {titulo: "Python", horas: 25};
+- 
+    const java= {
+        titulo: "Java", 
+        detalles: "Aprende a programar en Java desde cero",
+        precio: 3000,
+        horas: 4,
+        requisitos: "Debes tener nociones básicas de programación",
+        contenidos: [
+            {
+                titulo: "Primeros pasos en Java",
+                tematicas:["Introducción a Java", "Primer programa en Java","Reglas sintácticas y estructura de un programa Java"]
+            },
+            {
+                titulo:"Sintaxis básica de Java",
+                tematicas:["Tipos de datos y variables","Operadores"]
+            },
+            {
+                titulo:"Estructuras de control",
+                tematicas:["Condicionales","Iteración","Break"]
+            },
+            {
+                titulo: "Arrays",
+                tematicas: ["Concepto de array, declaración y creación","Recorrido de un array"]
+            },
+            {
+                titulo: "Clases",
+                tematicas:["Clases, objetos y métodos","Creación de objetos"]
+            },
+            {
+                titulo:"Cadenas de caracteres",
+                tematicas:["La clase String","Principales métodos de la clase String"]
+            }
+        ],
+        profesor: antonioMartinSierra
+        };
 
+- 
+    const javascript= {
+        titulo:"Javascript",
+        detalles:"Desde ES6 hasta ES10, async await, API's HTML y mucho más!",
+        precio: 3000,
+        horas: 18,
+        requisitos: "Conocimientos de HTML y CSS",
+        contenidos: [
+            {
+                titulo: "Basicos de Javascript",
+                tematicas:["Tipos de operadores","Strings","Math","Condicionales","Arrays","Iteración"]
+            },
+            {
+                titulo:"Objetos, funciones y métodos",
+                tematicas:["Introducción a objetos","Funciones","Programación orientada a objetos","Clases y objetos","Spread y Rest"]
+            },
+            {
+                titulo:"DOM Document Object Model",
+                tematicas:["DOM - Introducción","Selección de elementos","Atributos y clases","Eventos de ratón y teclado","Objeto evento","Crear e insertar elementos","DOM traversing","Insertar, clonar y borrar elementos","Objetos nativos y timers"]
+            },
+            {
+                titulo:"Peticiones HTTP",
+                tematicas:["Objeto XMLHTTPRequest","Callbacks","Promesas","Fetch","async / await","Axios"]
+            },
+            {
+                titulo:"Formularios y expresiones regulares",
+                tematicas:["Formularios","Introducción a las expresiones regulares","Expresiones regulares","Librería de validaciones"]
+            },
+            {
+                titulo:"API HTML",
+                tematicas:["Web Storage","Drag and drop","API File","API IndexedDB","API Visibility Change","API Online / Offline","API Intersetion Observer","API Geolocation","API Match Media"]
+            },
+            {
+                titulo:"Destructuring, debugging y transpilación",
+                tematicas:["Destructuring","Debugging","Transpilación de código con babel"]
+            }
+        ],
+        profesor: adrianHeras
+    }
+
+-
+    const golang={
+        titulo:"Go",
+        detalles:"Toda la Sintaxis, estructuras y secretos del lenguaje GOLANG",
+        precio: 2500,
+        horas:6,
+        requisitos:"Tener nociones básicas de desarrollo web",
+        contenidos:[
+            {
+                titulo:"Introducción",
+                tematicas:["Introducción a GO y sus características","Instalando GO "]
+            },
+            {
+                titulo:"Convenciones y sintáxis en GO",
+                tematicas:["Variables en GO","Condiciones","Ciclos","Funciones","Arreglos","Mapas","Estructuras","Interfaces","Manejo de archivos","Recursión","DEFER - PANIC & RECOVER","GORoutines (ejecución Asíncrona - Promesas en GO)"]
+            }
+        ],
+        profesor: pabloTilotta
+    };

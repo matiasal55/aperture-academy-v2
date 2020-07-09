@@ -7,14 +7,19 @@
   display: flex;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+
   div {
     display: flex;
     margin: 20px;
     align-self: center;
+    justify-content: center;
     background-color: $fondo2;
+    height: 250px;
     .img {
+      align-items: center;
       img {
         width: 150px;
+        height: 150px;
       }
     }
     .detalles {
@@ -36,6 +41,7 @@
 
       .img img {
         max-width: 100px;
+        max-height: 100px;
       }
     }
   }

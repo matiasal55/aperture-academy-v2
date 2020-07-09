@@ -1,26 +1,30 @@
 .detalles
-    div
+    .img
         img(src=`../img/cursos/${curso.titulo}.png`)
-    div
-        div
+    .tematica
+        .principal
             h1 Curso de #{curso.titulo}
-            h2 Valor: $#{curso.precio}
-            h2 Duración del curso: #{curso.horas}hs.
-            h2 Requisitos: #{curso.requisitos}
+            h3 Valor: $#{curso.precio}
+            h3 Duración del curso: #{curso.horas}hs.
+            h3 Requisitos: #{curso.requisitos}
             input(type="button" value="Inscribirse")
-        div
+        .contenidos
             h1 Contenidos por clase
             each detalle in curso.contenidos
-                h1 #{detalle[0]}
-                each clases in detalle[1]
-                    h2 #{clases}
-    .profesor
+                div
+                    h3 #{detalle.titulo}
+                    <i class="fas fa-caret-down"></i>
+                ul
+                    each clases in detalle.tematicas
+                        li #{clases}
+.profesor
+    div
+        h2 DOCENTE
+    .descripcion
         div
-            h1 DOCENTE
+            img(src=`../img/cursos/${curso.profesor.nombre.toLowerCase()}.jpg`)
         div
-            img(src=`../img/cursos/${curso.profesor.nombre}.jpg`)
-        div
-            h1 #{curso.profesor.nombre}
+            h3 #{curso.profesor.nombre}
             p
                 - for(let i=1;i<=curso.profesor.estrellas;i++)
                     <i class="fas fa-star"></i>
