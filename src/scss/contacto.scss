@@ -1,0 +1,47 @@
+@import "./components/master";
+@import "./components/mixins";
+
+.contacto {
+  display: flex;
+  justify-content: space-around;
+
+  .formulario-contacto {
+    form {
+      input {
+        margin: 10px 0px;
+        width: 95%;
+        height: 30px;
+      }
+
+      textarea {
+        resize: none;
+        width: 95%;
+      }
+
+      p,
+      span {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .datos-empresa {
+    p {
+      font-weight: bold;
+
+      span {
+        font-weight: normal;
+      }
+    }
+  }
+}
+
+@media (max-device-width: $responsive1) {
+  .contacto {
+    flex-direction: column;
+
+    .formulario-contacto {
+      margin-bottom: 30px;
+    }
+  }
+}

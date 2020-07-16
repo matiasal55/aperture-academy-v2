@@ -25,6 +25,14 @@ section > div {
   margin: 30px auto;
 }
 
+.tituloSeccion {
+  background-color: $fondo2;
+  color: black;
+  text-align: center;
+  padding: 30px 0px;
+  width: 100%;
+}
+
 @import "header";
 @import "menu";
 @import "footer";

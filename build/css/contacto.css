@@ -159,73 +159,37 @@ footer .copyright i {
     margin: 10px 0px;
   }
 }
-.pasos {
+.contacto {
   display: flex;
   justify-content: space-around;
-  padding: 30px 0px;
 }
-.pasos > div {
-  background-color: black;
-  color: white;
-  text-align: center;
+.contacto .formulario-contacto form input {
+  margin: 10px 0px;
+  width: 95%;
+  height: 30px;
 }
-.pasos div {
-  padding: 30px 10px;
+.contacto .formulario-contacto form textarea {
+  resize: none;
+  width: 95%;
 }
-
-.cards {
-  display: flex;
-  justify-content: space-around;
-  padding: 30px 0px;
+.contacto .formulario-contacto form p,
+.contacto .formulario-contacto form span {
+  font-size: 16px;
 }
-.cards > div {
-  background-color: black;
-  color: white;
-  text-align: center;
+.contacto .datos-empresa p {
+  font-weight: bold;
 }
-.cards > div {
-  border: 10px solid black;
-}
-.cards > div .imagen img {
-  max-width: 250px;
-  max-height: 250px;
-}
-
-.formas-de-pago {
-  display: flex;
-  justify-content: space-around;
-  padding: 30px 0px;
-  justify-content: center;
-}
-.formas-de-pago > div {
-  background-color: black;
-  color: white;
-  text-align: center;
-}
-.formas-de-pago > div {
-  background: none;
-}
-
-.img-forma img {
-  padding: 30px;
-  max-width: 100px;
+.contacto .datos-empresa p span {
+  font-weight: normal;
 }
 
 @media (max-device-width: 768px) {
-  .pasos,
-.cards,
-.footer {
+  .contacto {
     flex-direction: column;
   }
-
-  .formas-de-pago {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .img-forma img {
-    max-width: 75px;
+  .contacto .formulario-contacto {
+    margin-bottom: 30px;
   }
 }
 
-/*# sourceMappingURL=index.css.map */
+/*# sourceMappingURL=contacto.css.map */

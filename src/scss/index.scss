@@ -3,13 +3,6 @@
 @import "components/home/cards";
 @import "components/home/formasdepago";
 
-.tituloSeccion {
-  background-color: $fondo2;
-  color: black;
-  text-align: center;
-  padding: 30px 0px;
-}
-
 @media (max-device-width: $responsive1) {
   .pasos,
   .cards,
