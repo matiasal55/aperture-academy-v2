@@ -1,0 +1,21 @@
+extends ../components/master
+block estilo
+    - estilos="inscripcion"
+    - js="inscripcion"
+    - direccion="."
+block content
+    section
+        div
+            h1 Curso de HTML
+            h2 Inscripción
+            form(action="" id="inscripcion")
+                .inscripcion
+                    include ../components/campo-inscripcion
+                    include ../components/campo-inscripcion
+                    include ../components/campo-inscripcion
+                .agregar
+                    input(type="button" class="modificar" value="+") 
+                    span Agregar persona
+                .valor
+                    span $0000
+                    input(type="button", value="Inscribirse")

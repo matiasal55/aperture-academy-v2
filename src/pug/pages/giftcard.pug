@@ -1,0 +1,89 @@
+extends ../components/master
+block estilo
+    - estilos="giftcard"
+    - js="giftcard"
+    - direccion="."
+block content
+    section
+        .panel
+            .vista-previa
+                div
+                    div
+                        h4 Gift Card
+                    #nombre 
+                        p Nombre:
+                    #monto 
+                        p Valor de Gift Card: 
+                    #numero
+                        p Número de Gift Card:
+                h4 Vista previa
+            .opciones
+                div
+                    h1 Personalización de Gift Card
+                    form(action="")
+                        label(for="destinatario")
+                        input(type="text" placeholder="Nombre de destinatario")
+                        label(for="color")
+                        h4 Color:
+                        .colores
+                            div
+                                .rojo.circulo
+                                input(type="radio" value="rojo-fondo" name="texto")
+                            div
+                                .azul.circulo
+                                input(type="radio" value="azul-fondo" name="texto")
+                            div
+                                .verde.circulo
+                                input(type="radio" value="verde-fondo" name="texto")
+                            div
+                                .negro.circulo
+                                input(type="radio" value="negro-fondo" name="texto")
+                        h4 Tamaño de fuente:
+                        .fuente
+                            div
+                                h4 20px
+                                input(type="radio" value="20px" name="tamanio")
+                            div
+                                h4 28px
+                                input(type="radio" value="28px" name="tamanio")
+                            div
+                                h4 32px
+                                input(type="radio" value="32px" name="tamanio")
+                            div
+                                h4 40px
+                                input(type="radio" value="40px" name="tamanio")
+                            div
+                                h4 68px
+                                input(type="radio" value="68px" name="tamanio")
+                        .monto
+                            h4 Monto $
+                            input(type="number")
+                        h4 Ubicacion:
+                        .colores
+                            div
+                                .rojo
+                                input(type="radio" value="rojo-fondo" name="ubicacion")
+                            div
+                                .azul
+                                input(type="radio" value="azul-fondo" name="ubicacion")
+                            div
+                                .verde
+                                input(type="radio" value="verde-fondo" name="ubicacion")
+                            div
+                                .negro
+                                input(type="radio" value="negro-fondo" name="ubicacion")
+                        h4 Fondo:
+                        .colores
+                            div
+                                .rojo
+                                input(type="radio" value="rojo-fondo" name="fondo")
+                            div
+                                .azul
+                                input(type="radio" value="azul-fondo" name="fondo")
+                            div
+                                .verde
+                                input(type="radio" value="verde-fondo" name="fondo")
+                            div
+                                .negro
+                                input(type="radio" value="negro-fondo" name="fondo")
+                        input(type="button", value="Confirmar")

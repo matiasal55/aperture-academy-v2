@@ -1,0 +1,182 @@
+
+<html>
+  <head>
+    <title>Aperture Academy</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no"/>
+    <link rel="stylesheet" href="./css/giftcard.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&amp;display=swap" rel="stylesheet"/>
+    <script src="./js/giftcard.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <div class="responsive"><i class="fas fa-bars"></i></div>
+        <div class="logo"><img src="./img/logo.png"/></div>
+        <div class="buscador">
+          <input type="text" id="datoabuscar"/>
+          <button type="submit">Buscar</button>
+        </div>
+        <div class="carrito"><span>0</span><img src="./img/shopping-blanco.png"/></div>
+      </div>
+    </header>
+    <nav>
+      <div class="menu">
+        <div class="menu-items"> <a href="./index.html">Home</a></div>
+        <div class="menu-items">
+          <div class="cursos">
+            <div class="cursos-titulo"><a href="./cursos.html">Cursos</a></div>
+            <div class="cursos-items">
+              <div>HTML</div>
+              <div>Docker</div>
+              <div>Java</div>
+            </div>
+          </div>
+        </div>
+        <div class="menu-items"><a href="./calendario.html">Calendario</a></div>
+        <div class="menu-items"><a href="./giftcard.html">Gift Card</a></div>
+        <div class="menu-items"><a href="./inscripcion.html">Inscripción</a></div>
+        <div class="menu-items"><a href="./contacto.html">Contacto</a></div>
+        <div class="menu-items">
+          <div class="buscador-responsive">
+            <input type="text" id="datoabuscar"/>
+            <button type="submit">Buscar</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section>
+      <div class="panel">
+        <div class="vista-previa">
+          <div>
+            <div>
+              <h4>Gift Card</h4>
+            </div>
+            <div id="nombre"> 
+              <p>Nombre:</p>
+            </div>
+            <div id="monto"> 
+              <p>Valor de Gift Card: </p>
+            </div>
+            <div id="numero">
+              <p>Número de Gift Card:</p>
+            </div>
+          </div>
+          <h4>Vista previa</h4>
+        </div>
+        <div class="opciones">
+          <div>
+            <h1>Personalización de Gift Card</h1>
+            <form action="">
+              <label for="destinatario"></label>
+              <input type="text" placeholder="Nombre de destinatario"/>
+              <label for="color"></label>
+              <h4>Color:</h4>
+              <div class="colores">
+                <div>
+                  <div class="rojo circulo"></div>
+                  <input type="radio" value="rojo-fondo" name="texto"/>
+                </div>
+                <div>
+                  <div class="azul circulo"></div>
+                  <input type="radio" value="azul-fondo" name="texto"/>
+                </div>
+                <div>
+                  <div class="verde circulo"></div>
+                  <input type="radio" value="verde-fondo" name="texto"/>
+                </div>
+                <div>
+                  <div class="negro circulo"></div>
+                  <input type="radio" value="negro-fondo" name="texto"/>
+                </div>
+              </div>
+              <h4>Tamaño de fuente:</h4>
+              <div class="fuente">
+                <div>
+                  <h4>20px</h4>
+                  <input type="radio" value="20px" name="tamanio"/>
+                </div>
+                <div>
+                  <h4>28px</h4>
+                  <input type="radio" value="28px" name="tamanio"/>
+                </div>
+                <div>
+                  <h4>32px</h4>
+                  <input type="radio" value="32px" name="tamanio"/>
+                </div>
+                <div>
+                  <h4>40px</h4>
+                  <input type="radio" value="40px" name="tamanio"/>
+                </div>
+                <div>
+                  <h4>68px</h4>
+                  <input type="radio" value="68px" name="tamanio"/>
+                </div>
+              </div>
+              <div class="monto">
+                <h4>Monto $</h4>
+                <input type="number"/>
+              </div>
+              <h4>Ubicacion:</h4>
+              <div class="colores">
+                <div>
+                  <div class="rojo"></div>
+                  <input type="radio" value="rojo-fondo" name="ubicacion"/>
+                </div>
+                <div>
+                  <div class="azul"></div>
+                  <input type="radio" value="azul-fondo" name="ubicacion"/>
+                </div>
+                <div>
+                  <div class="verde"></div>
+                  <input type="radio" value="verde-fondo" name="ubicacion"/>
+                </div>
+                <div>
+                  <div class="negro"></div>
+                  <input type="radio" value="negro-fondo" name="ubicacion"/>
+                </div>
+              </div>
+              <h4>Fondo:</h4>
+              <div class="colores">
+                <div>
+                  <div class="rojo"></div>
+                  <input type="radio" value="rojo-fondo" name="fondo"/>
+                </div>
+                <div>
+                  <div class="azul"></div>
+                  <input type="radio" value="azul-fondo" name="fondo"/>
+                </div>
+                <div>
+                  <div class="verde"></div>
+                  <input type="radio" value="verde-fondo" name="fondo"/>
+                </div>
+                <div>
+                  <div class="negro"></div>
+                  <input type="radio" value="negro-fondo" name="fondo"/>
+                </div>
+              </div>
+              <input type="button" value="Confirmar"/>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="footer">
+        <div class="copyright"><i class="far fa-copyright"> </i><span>2020. Academy. Todos los derechos reservados.</span></div>
+        <div class="navfooter">   
+          <div class="menu-items"> <a href="./index.html">Home</a></div>
+          <div class="menu-items"><a href="./calendario.html">Calendario</a></div>
+          <div class="menu-items"><a href="./giftcard.html">Gift Card</a></div>
+          <div class="menu-items"><a href="./inscripcion.html">Inscripción</a></div>
+          <div class="menu-items"><a href="./contacto.html">Contacto</a></div>
+        </div>
+        <div class="redes">
+          <div><i class="fab fa-facebook-square"></i> <a href="#">Seguinos en Facebook</a></div>
+          <div><i class="fab fa-twitter-square"></i> <a href="#">Seguinos en Twitter</a></div>
+          <div><i class="fab fa-instagram"></i> <a href="#">Seguinos en Instagram</a></div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

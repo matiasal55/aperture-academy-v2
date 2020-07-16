@@ -1,0 +1,65 @@
+@import "./components/master";
+@import "./components/mixins";
+
+h1 {
+  margin-bottom: 30px;
+}
+form {
+  .inscripcion {
+    input[type="text"],
+    input[type="number"] {
+      width: 25%;
+      margin: 20px 5px;
+      height: 40px;
+    }
+  }
+}
+
+.modificar {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+
+.agregar {
+  span {
+    margin-left: 10px;
+  }
+}
+
+.valor {
+  margin: 30px 0px;
+  span {
+    background-color: black;
+    color: white;
+    font-size: 1.5em;
+  }
+
+  input {
+    border: none;
+    font-size: 16px;
+    padding: 0px 30px;
+    margin: 0px 10px;
+  }
+}
+
+@media (max-device-width: $responsive1) {
+  form {
+    .inscripcion {
+      margin-bottom: 30px;
+      .alumno {
+        display: flex;
+        flex-direction: column;
+
+        input[type="text"],
+        input[type="number"] {
+          width: 80vw;
+          margin-left: 0px;
+        }
+      }
+    }
+  }
+}

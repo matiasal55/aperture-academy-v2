@@ -3,10 +3,10 @@
   <head>
     <title>Aperture Academy</title>
     <meta name="viewport" content="width=device-width, user-scalable=no"/>
-    <link rel="stylesheet" href="./css/cursos.css"/>
+    <link rel="stylesheet" href="./css/inscripcion.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous"/>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&amp;display=swap" rel="stylesheet"/>
-    <script src="./js/cursos.js"></script>
+    <script src="./js/inscripcion.js"></script>
   </head>
   <body>
     <header>
@@ -46,52 +46,37 @@
       </div>
     </nav>
     <section>
-      <div class="cursos-lista">
-        <div>
-          <div class="img"><img src="./img/cursos/html.png"/></div>
-          <div class="detalles">
-            <h1><a href="./cursos/html.html">Curso de HTML</a></h1>
-            <p> <b>Detalles: </b><span>Aprende a desarrollar tus propias plantillas Web desde cero, usando los últimos estándares de Html 5</span></p>
-            <p> <b>Cantidad de horas: </b><span>4</span></p>
-            <p><b>Precio: </b><span>2500</span></p>
+      <div>
+        <h1>Curso de HTML</h1>
+        <h2>Inscripción</h2>
+        <form action="" id="inscripcion">
+          <div class="inscripcion">
+            <div class="alumno">
+              <input type="text" placeholder="Nombre"/>
+              <input type="text" placeholder="Apellido"/>
+              <input type="number" placeholder="DNI"/>
+              <input class="modificar" type="button" value="-"/>
+            </div>
+            <div class="alumno">
+              <input type="text" placeholder="Nombre"/>
+              <input type="text" placeholder="Apellido"/>
+              <input type="number" placeholder="DNI"/>
+              <input class="modificar" type="button" value="-"/>
+            </div>
+            <div class="alumno">
+              <input type="text" placeholder="Nombre"/>
+              <input type="text" placeholder="Apellido"/>
+              <input type="number" placeholder="DNI"/>
+              <input class="modificar" type="button" value="-"/>
+            </div>
           </div>
-        </div>
-        <div>
-          <div class="img"><img src="./img/cursos/docker.png"/></div>
-          <div class="detalles">
-            <h1><a href="./cursos/docker.html">Curso de Docker</a></h1>
-            <p> <b>Detalles: </b><span>Conviértete en un Docker DevOps Master aprendiendo de cero la tecnología que está cambiando el mundo con contenedores! </span></p>
-            <p> <b>Cantidad de horas: </b><span>9</span></p>
-            <p><b>Precio: </b><span>3500</span></p>
+          <div class="agregar">
+            <input class="modificar" type="button" value="+"/><span>Agregar persona</span>
           </div>
-        </div>
-        <div>
-          <div class="img"><img src="./img/cursos/java.png"/></div>
-          <div class="detalles">
-            <h1><a href="./cursos/java.html">Curso de Java</a></h1>
-            <p> <b>Detalles: </b><span>Aprende a programar en Java desde cero</span></p>
-            <p> <b>Cantidad de horas: </b><span>4</span></p>
-            <p><b>Precio: </b><span>3000</span></p>
+          <div class="valor"><span>$0000</span>
+            <input type="button" value="Inscribirse"/>
           </div>
-        </div>
-        <div>
-          <div class="img"><img src="./img/cursos/javascript.png"/></div>
-          <div class="detalles">
-            <h1><a href="./cursos/javascript.html">Curso de Javascript</a></h1>
-            <p> <b>Detalles: </b><span>Desde ES6 hasta ES10, async await, API's HTML y mucho más!</span></p>
-            <p> <b>Cantidad de horas: </b><span>18</span></p>
-            <p><b>Precio: </b><span>3000</span></p>
-          </div>
-        </div>
-        <div>
-          <div class="img"><img src="./img/cursos/go.png"/></div>
-          <div class="detalles">
-            <h1><a href="./cursos/go.html">Curso de Go</a></h1>
-            <p> <b>Detalles: </b><span>Toda la Sintaxis, estructuras y secretos del lenguaje GOLANG</span></p>
-            <p> <b>Cantidad de horas: </b><span>6</span></p>
-            <p><b>Precio: </b><span>2500</span></p>
-          </div>
-        </div>
+        </form>
       </div>
     </section>
     <footer>

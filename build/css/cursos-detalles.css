@@ -18,6 +18,11 @@ footer .footer {
   justify-content: space-between;
 }
 
+section > div {
+  width: 80%;
+  margin: 30px auto;
+}
+
 header {
   background-color: #0c46e8;
   padding: 30px;
@@ -148,8 +153,6 @@ footer .copyright i {
 }
 .detalles {
   width: 40%;
-  margin: 0 auto;
-  padding: 30px 0px;
   display: flex;
   justify-content: center;
 }

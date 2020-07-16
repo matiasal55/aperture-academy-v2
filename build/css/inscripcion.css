@@ -151,45 +151,58 @@ footer .copyright i {
     margin: 10px 0px;
   }
 }
-.cursos-lista {
-  display: flex;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+h1 {
+  margin-bottom: 30px;
 }
-.cursos-lista div {
-  display: flex;
-  margin: 20px;
-  align-self: center;
-  justify-content: center;
-  background-color: #808080;
-  height: 250px;
+
+form .inscripcion input[type=text],
+form .inscripcion input[type=number] {
+  width: 25%;
+  margin: 20px 5px;
+  height: 40px;
 }
-.cursos-lista div .img {
-  align-items: center;
+
+.modificar {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
 }
-.cursos-lista div .img img {
-  width: 150px;
-  height: 150px;
+
+.agregar span {
+  margin-left: 10px;
 }
-.cursos-lista div .detalles {
-  flex-direction: column;
+
+.valor {
+  margin: 30px 0px;
+}
+.valor span {
+  background-color: black;
+  color: white;
+  font-size: 1.5em;
+}
+.valor input {
+  border: none;
+  font-size: 16px;
+  padding: 0px 30px;
+  margin: 0px 10px;
 }
 
 @media (max-device-width: 768px) {
-  .cursos-lista {
-    margin: 10px 0px;
-    display: grid;
-    grid-template-columns: 100%;
-    width: 100vw;
+  form .inscripcion {
+    margin-bottom: 30px;
   }
-  .cursos-lista div {
-    margin: 10px 0px;
-    padding: 0px 10px;
+  form .inscripcion .alumno {
+    display: flex;
+    flex-direction: column;
   }
-  .cursos-lista div .img img {
-    max-width: 100px;
-    max-height: 100px;
+  form .inscripcion .alumno input[type=text],
+form .inscripcion .alumno input[type=number] {
+    width: 80vw;
+    margin-left: 0px;
   }
 }
 
-/*# sourceMappingURL=cursos.css.map */
+/*# sourceMappingURL=inscripcion.css.map */

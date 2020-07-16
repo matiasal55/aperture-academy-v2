@@ -18,6 +18,11 @@ footer .footer {
   justify-content: space-between;
 }
 
+section > div {
+  width: 80%;
+  margin: 30px auto;
+}
+
 header {
   background-color: #0c46e8;
   padding: 30px;

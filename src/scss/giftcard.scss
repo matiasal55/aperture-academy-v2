@@ -1,0 +1,100 @@
+@import "./components/master";
+@import "./components/mixins";
+
+.panel {
+  display: flex;
+  justify-content: center;
+
+  .vista-previa {
+    margin-right: 30px;
+
+    > div {
+      width: 400px;
+      height: 250px;
+      background-color: red;
+
+      div {
+        position: relative;
+        top: 150;
+      }
+    }
+
+    h4,
+    p {
+      text-align: center;
+    }
+  }
+
+  .opciones {
+    margin-left: 30px;
+
+    form {
+      h4 {
+        margin: 10px 0px;
+      }
+
+      .colores,
+      .fuente {
+        display: flex;
+
+        div {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin: 10px;
+        }
+      }
+      .colores {
+        div div {
+          width: 50px;
+          height: 50px;
+        }
+
+        .circulo {
+          border-radius: 50%;
+        }
+
+        .rojo {
+          background-color: red;
+        }
+
+        .azul {
+          background-color: blue;
+        }
+
+        .verde {
+          background-color: green;
+        }
+
+        .negro {
+          background-color: black;
+        }
+      }
+      input {
+        width: 100%;
+        margin: 10px 0px;
+      }
+    }
+  }
+}
+
+@media (max-device-width: $responsive1) {
+  .panel {
+    flex-direction: column;
+
+    .vista-previa {
+      div,
+      h4 {
+        width: 80vw;
+      }
+    }
+
+    .opciones {
+      margin-left: 0px;
+      .colores,
+      .fuente {
+        flex-wrap: wrap;
+      }
+    }
+  }
+}
