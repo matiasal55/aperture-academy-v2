@@ -1,0 +1,163 @@
+* {
+  font-family: "Open Sans", sans-serif;
+  text-decoration: none;
+  position: relative;
+  margin: 0;
+}
+
+body {
+  background-color: #d3d3d3;
+}
+
+header .header,
+nav .menu,
+footer .footer {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+section > div {
+  width: 80%;
+  margin: 30px auto;
+}
+
+.tituloSeccion {
+  background-color: #808080;
+  color: black;
+  text-align: center;
+  padding: 30px 0px;
+  width: 100%;
+}
+
+header {
+  background-color: #0c46e8;
+  padding: 30px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header {
+  align-items: center;
+}
+.header .responsive {
+  display: none;
+}
+.header .logo img {
+  min-width: 50px;
+  max-width: 200px;
+}
+.header .carrito img {
+  width: 50px;
+}
+
+nav {
+  background-color: skyblue;
+}
+nav .menu {
+  justify-content: initial;
+}
+nav .menu-items {
+  padding: 20px;
+  display: block;
+}
+nav .menu-items:hover {
+  background-color: white;
+}
+nav .menu-items a {
+  color: black;
+}
+nav .menu-items .cursos .cursos-items {
+  display: none;
+  position: absolute;
+  left: -20;
+  margin: 20px 0px;
+  z-index: 10;
+  padding: 20px;
+  background-color: red;
+}
+nav .menu-items .cursos:hover > .cursos-items {
+  display: block;
+}
+
+.buscador-responsive {
+  display: none;
+}
+
+footer {
+  background-color: black;
+}
+footer .footer {
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  padding: 30px 0px;
+}
+footer .footer a {
+  color: white;
+}
+footer .copyright i {
+  color: white;
+}
+
+@media (max-device-width: 768px) {
+  header {
+    padding: 10px;
+  }
+
+  .header {
+    min-width: 100%;
+  }
+  .header .logo img {
+    max-width: 150px;
+  }
+  .header .buscador {
+    display: none;
+  }
+  .header .responsive {
+    display: block;
+  }
+  .header .carrito img {
+    max-width: 30px;
+  }
+
+  .menu {
+    flex-direction: column;
+    min-width: 100%;
+  }
+  .menu .menu-items {
+    padding: 20px 0px;
+  }
+  .menu .menu-items .cursos .cursos-items {
+    visibility: hidden;
+  }
+
+  nav {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    left: -100%;
+    z-index: 200;
+    text-align: center;
+  }
+
+  .menu-responsive {
+    left: 0;
+  }
+
+  .buscador-responsive {
+    display: block;
+  }
+
+  .footer {
+    text-align: center;
+    flex-direction: column;
+  }
+  .footer div {
+    margin: 10px 0px;
+  }
+}
+
+/*# sourceMappingURL=calendario.css.map */

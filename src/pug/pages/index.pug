@@ -1,9 +1,11 @@
 extends ../components/master
 block estilo
     - estilos="index"
-    - js="home"
+    - js="index"
     - direccion="."
 block content
+    main
+        include ../components/home/slide
     section
         include ../components/home/pasos
     section

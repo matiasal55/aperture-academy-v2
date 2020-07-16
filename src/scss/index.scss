@@ -2,12 +2,20 @@
 @import "components/home/pasos";
 @import "components/home/cards";
 @import "components/home/formasdepago";
+@import "components/home/slide";
 
 @media (max-device-width: $responsive1) {
   .pasos,
-  .cards,
-  .footer {
+  .cards {
     flex-direction: column;
+  }
+
+  .pasos,
+  .cards {
+    > div {
+      margin-bottom: 15px;
+      margin-top: 15px;
+    }
   }
 
   .formas-de-pago {
