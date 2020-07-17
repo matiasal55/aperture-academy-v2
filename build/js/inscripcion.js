@@ -52,28 +52,27 @@ var Alumno = function Alumno(nombre, apellido, dni) {
 
 var boton = document.getElementById("inscribirse");
 var lista = document.getElementsByClassName("alumno");
-var inscriptos = [];
-boton.addEventListener("click", function () {
-  var nodo = document.createElement("div");
-  nodo.className = "lista-inscriptos"; // let tabla = document.createElement("table");
-  // let cabecera = document.createElement("tr");
-  // let titulo1 = document.createElement("th");
-  // titulo1.textContent = "Nombre";
-  // let titulo2 = document.createElement("th");
-  // titulo2.textContent = "Apellido";
-  // let titulo3 = document.createElement("th");
-  // titulo1.textContent = "DNI";
-  // // tabla.appendChild();
+var bandera = 0;
+
+var enlistar = function enlistar() {
+  var inscriptos = []; // let div = document.createElement("div");
+
+  var tabla = document.createElement("table");
+  tabla.className = "lista-inscriptos"; // div.appendChild(tabla);
+
+  var cabecera = document.createElement("tr");
+  cabecera.innerHTML = "<th>Nombre</th><th>Apellido</th><th>DNI</th>";
+  tabla.appendChild(cabecera);
 
   var _iterator2 = _createForOfIteratorHelper(lista),
       _step2;
 
   try {
     for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
-      var alumno = _step2.value;
-      var nombre = alumno.children[0].value;
-      var apellido = alumno.children[1].value;
-      var dni = alumno.children[2].value;
+      var _alumno = _step2.value;
+      var nombre = _alumno.children[0].value;
+      var apellido = _alumno.children[1].value;
+      var dni = _alumno.children[2].value;
       var nuevo = new Alumno(nombre, apellido, dni);
       inscriptos.push(nuevo);
     }
@@ -83,21 +82,21 @@ boton.addEventListener("click", function () {
     _iterator2.f();
   }
 
-  var _iterator3 = _createForOfIteratorHelper(inscriptos),
-      _step3;
-
-  try {
-    for (_iterator3.s(); !(_step3 = _iterator3.n()).done;) {
-      var _alumno = _step3.value;
-      var parrafo = document.createElement("p");
-      parrafo.textContent = _alumno;
-      nodo.appendChild(parrafo);
-    }
-  } catch (err) {
-    _iterator3.e(err);
-  } finally {
-    _iterator3.f();
+  for (var _i = 0, _inscriptos = inscriptos; _i < _inscriptos.length; _i++) {
+    var alumno = _inscriptos[_i];
+    var fila = document.createElement("tr");
+    fila.innerHTML = "<td>".concat(alumno.nombre, "</td><td>").concat(alumno.apellido, "</td><td>").concat(alumno.dni);
+    tabla.appendChild(fila);
   }
 
-  document.getElementById("inscripcion").appendChild(nodo);
-});
+  if (bandera == 0) {
+    document.getElementById("inscripcion").appendChild(tabla);
+    bandera++;
+  } else {
+    document.getElementsByClassName("lista-inscriptos")[0].remove();
+    bandera = 0;
+    enlistar();
+  }
+};
+
+boton.addEventListener("click", enlistar);

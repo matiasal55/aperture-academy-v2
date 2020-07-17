@@ -31,21 +31,17 @@ class Alumno {
 
 const boton = document.getElementById("inscribirse");
 const lista = document.getElementsByClassName("alumno");
-let inscriptos = [];
+let bandera = 0;
 
-boton.addEventListener("click", () => {
-  let nodo = document.createElement("div");
-  nodo.className = "lista-inscriptos";
-  // let tabla = document.createElement("table");
-  // let cabecera = document.createElement("tr");
-  // let titulo1 = document.createElement("th");
-  // titulo1.textContent = "Nombre";
-  // let titulo2 = document.createElement("th");
-  // titulo2.textContent = "Apellido";
-  // let titulo3 = document.createElement("th");
-  // titulo1.textContent = "DNI";
-
-  // // tabla.appendChild();
+const enlistar = () => {
+  let inscriptos = [];
+  // let div = document.createElement("div");
+  let tabla = document.createElement("table");
+  tabla.className = "lista-inscriptos";
+  // div.appendChild(tabla);
+  let cabecera = document.createElement("tr");
+  cabecera.innerHTML = "<th>Nombre</th><th>Apellido</th><th>DNI</th>";
+  tabla.appendChild(cabecera);
 
   for (let alumno of lista) {
     const nombre = alumno.children[0].value;
@@ -56,9 +52,18 @@ boton.addEventListener("click", () => {
   }
 
   for (let alumno of inscriptos) {
-    let parrafo = document.createElement("p");
-    parrafo.textContent = alumno;
-    nodo.appendChild(parrafo);
+    let fila = document.createElement("tr");
+    fila.innerHTML = `<td>${alumno.nombre}</td><td>${alumno.apellido}</td><td>${alumno.dni}`;
+    tabla.appendChild(fila);
   }
-  document.getElementById("inscripcion").appendChild(nodo);
-});
+  if (bandera == 0) {
+    document.getElementById("inscripcion").appendChild(tabla);
+    bandera++;
+  } else {
+    document.getElementsByClassName("lista-inscriptos")[0].remove();
+    bandera = 0;
+    enlistar();
+  }
+};
+
+boton.addEventListener("click", enlistar);

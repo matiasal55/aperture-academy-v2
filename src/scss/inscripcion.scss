@@ -46,6 +46,14 @@ form {
   }
 }
 
+.lista-inscriptos {
+  width: 50%;
+
+  th {
+    background-color: white;
+  }
+}
+
 @media (max-device-width: $responsive1) {
   form {
     .inscripcion {
