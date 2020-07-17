@@ -189,6 +189,10 @@ footer .copyright i {
   list-style: none;
   padding: 0;
   margin: 10px 0;
+  display: none;
+}
+.detalles .contenidos .mostrar {
+  display: block;
 }
 .detalles input {
   display: block;

@@ -7,13 +7,14 @@
             h3 Valor: $#{curso.precio}
             h3 Duración del curso: #{curso.horas}hs.
             h3 Requisitos: #{curso.requisitos}
-            input(type="button" value="Inscribirse")
+            input(type="button" value="Inscribirse" id="boton")
         .contenidos
             h1 Contenidos por clase
             each detalle in curso.contenidos
                 div
                     h3 #{detalle.titulo}
-                    <i class="fas fa-caret-down"></i>
+                    span.desplegar
+                        <i class="fas fa-caret-down"></i>
                 ul
                     each clases in detalle.tematicas
                         li #{clases}
