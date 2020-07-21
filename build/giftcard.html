@@ -49,16 +49,16 @@
         <div class="vista-previa">
           <div>
             <div>
-              <h4>Gift Card</h4>
+              <h4 class="texto">Gift Card</h4>
             </div>
             <div id="nombre"> 
-              <p>Nombre:</p>
+              <p class="texto">Nombre:</p>
             </div>
-            <div id="monto"> 
-              <p>Valor de Gift Card: </p>
+            <div id="saldo"> 
+              <p class="texto">Valor de Gift Card: </p>
             </div>
             <div id="numero">
-              <p>Número de Gift Card:</p>
+              <p class="texto">Número de Gift Card:</p>
             </div>
           </div>
           <h4>Vista previa</h4>
@@ -66,27 +66,27 @@
         <div class="opciones">
           <div>
             <h1>Personalización de Gift Card</h1>
-            <form action="">
+            <form action="" id="giftcard">
               <label for="destinatario"></label>
-              <input type="text" placeholder="Nombre de destinatario"/>
+              <input type="text" placeholder="Nombre de destinatario" id="destinatario"/>
               <label for="color"></label>
               <h4>Color:</h4>
               <div class="colores">
                 <div>
                   <div class="rojo circulo"></div>
-                  <input type="radio" value="rojo-fondo" name="texto"/>
+                  <input type="radio" value="red" name="texto"/>
                 </div>
                 <div>
                   <div class="azul circulo"></div>
-                  <input type="radio" value="azul-fondo" name="texto"/>
+                  <input type="radio" value="blue" name="texto"/>
                 </div>
                 <div>
                   <div class="verde circulo"></div>
-                  <input type="radio" value="verde-fondo" name="texto"/>
+                  <input type="radio" value="green" name="texto"/>
                 </div>
                 <div>
                   <div class="negro circulo"></div>
-                  <input type="radio" value="negro-fondo" name="texto"/>
+                  <input type="radio" value="black" name="texto"/>
                 </div>
               </div>
               <h4>Tamaño de fuente:</h4>
@@ -114,47 +114,47 @@
               </div>
               <div class="monto">
                 <h4>Monto $</h4>
-                <input type="number"/>
+                <input type="number" id="monto"/>
               </div>
               <h4>Ubicacion:</h4>
               <div class="colores">
                 <div>
                   <div class="rojo"></div>
-                  <input type="radio" value="rojo-fondo" name="ubicacion"/>
+                  <input type="radio" value="red" name="ubicacion"/>
                 </div>
                 <div>
                   <div class="azul"></div>
-                  <input type="radio" value="azul-fondo" name="ubicacion"/>
+                  <input type="radio" value="blue" name="ubicacion"/>
                 </div>
                 <div>
                   <div class="verde"></div>
-                  <input type="radio" value="verde-fondo" name="ubicacion"/>
+                  <input type="radio" value="green" name="ubicacion"/>
                 </div>
                 <div>
                   <div class="negro"></div>
-                  <input type="radio" value="negro-fondo" name="ubicacion"/>
+                  <input type="radio" value="black" name="ubicacion"/>
                 </div>
               </div>
               <h4>Fondo:</h4>
               <div class="colores">
                 <div>
                   <div class="rojo"></div>
-                  <input type="radio" value="rojo-fondo" name="fondo"/>
+                  <input type="radio" value="red" name="fondo"/>
                 </div>
                 <div>
                   <div class="azul"></div>
-                  <input type="radio" value="azul-fondo" name="fondo"/>
+                  <input type="radio" value="blue" name="fondo"/>
                 </div>
                 <div>
                   <div class="verde"></div>
-                  <input type="radio" value="verde-fondo" name="fondo"/>
+                  <input type="radio" value="green" name="fondo"/>
                 </div>
                 <div>
                   <div class="negro"></div>
-                  <input type="radio" value="negro-fondo" name="fondo"/>
+                  <input type="radio" value="black" name="fondo"/>
                 </div>
               </div>
-              <input type="button" value="Confirmar"/>
+              <input type="button" value="Confirmar" id="confirmar"/>
             </form>
           </div>
         </div>

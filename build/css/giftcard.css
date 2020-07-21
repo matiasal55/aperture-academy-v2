@@ -176,8 +176,11 @@ footer .copyright i {
   top: 150;
 }
 .panel .vista-previa h4,
-.panel .vista-previa p {
+.panel .vista-previa .texto {
   text-align: center;
+}
+.panel .vista-previa .texto {
+  color: black;
 }
 .panel .opciones {
   margin-left: 30px;
