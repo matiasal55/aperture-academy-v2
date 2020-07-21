@@ -1,5 +1,9 @@
-include ../lista-de-cursos
-- const cursos=[html,docker,java,javascript,golang];
+include ./golang
+include ./html
+include ./docker
+include ./java
+include ./javascript
+- const cursos=[html,java,javascript,docker,golang];
 
 
 
@@ -8,7 +12,7 @@ include ../lista-de-cursos
         div
            
             .img
-                img(src=`./img/cursos/${curso.titulo.toLowerCase()}.png`)
+                img(src=`./img/cursos/${curso.titulo}.png`)
             .detalles
                 h1
                     a(href=`./cursos/${curso.titulo.toLowerCase()}.html`) Curso de #{curso.titulo}

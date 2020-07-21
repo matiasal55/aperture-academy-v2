@@ -1,0 +1,46 @@
+include ./profesores/gonzalezGomezRicardo
+
+- const titulo_docker="Docker";
+- const detalles_docker="Conviértete en un Docker DevOps Master aprendiendo de cero la tecnología que está cambiando el mundo con contenedores!";
+- const precio_docker=3500;
+- const horas_docker=9;
+- const requisitos_docker="Se recomienda tener una noción básica de linux.";
+- 
+    const contenidos_docker=[
+            {
+            titulo: "Introducción",
+            tematicas: ["¿Qué es Docker?", "Arquitectura de Docker","¿Qué es una imagen?","¿Qué es un contenedor?","Contenedores VS Máquinas Virtuales","Instalación"]
+            },
+            {
+            titulo: "Docker Images",
+            tematicas: ["Introducción","Dockerfile"]
+            },
+            {
+            titulo: "Containers",
+            tematicas: ["Introducción","Listar / Mapear puertos","Iniciar / Reiniciar / Detener","Variables de entorno","Crear un contenedor MySQL, Jenkins, Mongo y PostgreSQL","Administrar usuarios","Limitar recursos a un contenedor","Convierte un contenedor en una imagen"]
+            },
+            {
+            titulo: "Volumes",
+            tematicas:["¿Por qué son importantes los volúmenes?","Volúmenes de host y anónimos - Caso práctico MySQL","Comprende a fondo la instrucción VOLUME de un Dockerfile","Dangling volumes","Comparte volúmenes entre uno o más contenedores"]
+            },
+            {
+            titulo: "Network",
+            tematicas:["¿Cuál es la red por defecto?","Crear una red definida por el usuario","Inspeccionar redes","Agregar contenedores a una red distinta a la por defecto","Conectar contenedores en la misma red y en otra distinta","Eliminar redes"]
+            },
+            {
+            titulo: "Compose",
+            tematicas: ["Primeros pasos en Compose","Variables de entorno, redes y volúmenes en Compose","Sobreescribe el CMD de un contenedor con Compose","Limitar recursos en contenedores (Compose v2)","Politica de reinicio de contenedores"]
+            }
+        ];
+- const profesor_docker= ricardoGonzalezGomez;
+
+- 
+    const docker={
+        titulo:titulo_docker,
+        detalles:detalles_docker,
+        precio:precio_docker,
+        horas: horas_docker,
+        requisitos: requisitos_docker,
+        contenidos: contenidos_docker,
+        profesor: profesor_docker
+    };
