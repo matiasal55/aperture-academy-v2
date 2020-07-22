@@ -52,13 +52,13 @@
               <h4 class="texto">Gift Card</h4>
             </div>
             <div id="nombre"> 
-              <p class="texto">Nombre:</p>
+              <p class="texto">Nombre: </p>
             </div>
             <div id="saldo"> 
               <p class="texto">Valor de Gift Card: </p>
             </div>
             <div id="numero">
-              <p class="texto">Número de Gift Card:</p>
+              <p class="texto">Número de Gift Card: </p>
             </div>
           </div>
           <h4>Vista previa</h4>
@@ -67,8 +67,11 @@
           <div>
             <h1>Personalización de Gift Card</h1>
             <form action="" id="giftcard">
-              <label for="destinatario"></label>
-              <input type="text" placeholder="Nombre de destinatario" id="destinatario"/>
+              <div class="destinatario">
+                <label for="destinatario"></label>
+                <input type="text" placeholder="Nombre de destinatario" name="nombre" id="destinatario"/>
+                <div></div>
+              </div>
               <label for="color"></label>
               <h4>Color:</h4>
               <div class="colores">
@@ -88,52 +91,51 @@
                   <div class="negro circulo"></div>
                   <input type="radio" value="black" name="texto"/>
                 </div>
+                <div></div>
               </div>
               <h4>Tamaño de fuente:</h4>
               <div class="fuente">
                 <div>
-                  <h4>20px</h4>
-                  <input type="radio" value="20px" name="tamanio"/>
+                  <h4>10px</h4>
+                  <input type="radio" value="10px" name="tamanio"/>
                 </div>
                 <div>
-                  <h4>28px</h4>
-                  <input type="radio" value="28px" name="tamanio"/>
+                  <h4>12px</h4>
+                  <input type="radio" value="12px" name="tamanio"/>
                 </div>
                 <div>
-                  <h4>32px</h4>
-                  <input type="radio" value="32px" name="tamanio"/>
+                  <h4>14px</h4>
+                  <input type="radio" value="14px" name="tamanio"/>
                 </div>
                 <div>
-                  <h4>40px</h4>
-                  <input type="radio" value="40px" name="tamanio"/>
+                  <h4>16px</h4>
+                  <input type="radio" value="16px" name="tamanio"/>
                 </div>
                 <div>
-                  <h4>68px</h4>
-                  <input type="radio" value="68px" name="tamanio"/>
+                  <h4>18px</h4>
+                  <input type="radio" value="18px" name="tamanio"/>
                 </div>
               </div>
               <div class="monto">
                 <h4>Monto $</h4>
-                <input type="number" id="monto"/>
+                <input type="number" id="monto" name="monto"/>
+                <div></div>
               </div>
-              <h4>Ubicacion:</h4>
+              <h4>Alineacion:</h4>
               <div class="colores">
                 <div>
-                  <div class="rojo"></div>
-                  <input type="radio" value="red" name="ubicacion"/>
+                  <div class="rojo"><span>Izq</span></div>
+                  <input type="radio" value="left" name="alineacion"/>
                 </div>
                 <div>
-                  <div class="azul"></div>
-                  <input type="radio" value="blue" name="ubicacion"/>
+                  <div class="azul"><span>Ctr</span></div>
+                  <input type="radio" value="center" name="alineacion"/>
                 </div>
                 <div>
-                  <div class="verde"></div>
-                  <input type="radio" value="green" name="ubicacion"/>
+                  <div class="verde"><span>Der</span></div>
+                  <input type="radio" value="right" name="alineacion"/>
                 </div>
-                <div>
-                  <div class="negro"></div>
-                  <input type="radio" value="black" name="ubicacion"/>
-                </div>
+                <div></div>
               </div>
               <h4>Fondo:</h4>
               <div class="colores">
@@ -153,6 +155,7 @@
                   <div class="negro"></div>
                   <input type="radio" value="black" name="fondo"/>
                 </div>
+                <div></div>
               </div>
               <input type="button" value="Confirmar" id="confirmar"/>
             </form>

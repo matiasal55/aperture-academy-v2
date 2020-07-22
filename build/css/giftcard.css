@@ -170,6 +170,7 @@ footer .copyright i {
   width: 400px;
   height: 250px;
   background-color: red;
+  padding: 0px 10px;
 }
 .panel .vista-previa > div div {
   position: relative;
@@ -184,9 +185,15 @@ footer .copyright i {
 }
 .panel .opciones {
   margin-left: 30px;
+  justify-content: flex-start;
+  width: 40%;
 }
 .panel .opciones form h4 {
   margin: 10px 0px;
+}
+.panel .opciones form p {
+  font-size: 16px;
+  color: red;
 }
 .panel .opciones form .colores,
 .panel .opciones form .fuente {
@@ -202,6 +209,10 @@ footer .copyright i {
 .panel .opciones form .colores div div {
   width: 50px;
   height: 50px;
+}
+.panel .opciones form .colores div div span {
+  position: relative;
+  top: 12px;
 }
 .panel .opciones form .colores .circulo {
   border-radius: 50%;
@@ -233,6 +244,7 @@ footer .copyright i {
   }
   .panel .opciones {
     margin-left: 0px;
+    width: 80vw;
   }
   .panel .opciones .colores,
 .panel .opciones .fuente {

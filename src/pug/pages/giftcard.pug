@@ -11,18 +11,20 @@ block content
                     div
                         h4.texto Gift Card
                     #nombre 
-                        p.texto Nombre:
+                        p.texto Nombre: 
                     #saldo 
                         p.texto Valor de Gift Card: 
                     #numero
-                        p.texto Número de Gift Card:
+                        p.texto Número de Gift Card: 
                 h4 Vista previa
             .opciones
                 div
                     h1 Personalización de Gift Card
                     form(action="" id="giftcard")
-                        label(for="destinatario")
-                        input(type="text" placeholder="Nombre de destinatario" id="destinatario")
+                        .destinatario
+                            label(for="destinatario")
+                            input(type="text" placeholder="Nombre de destinatario" name="nombre" id="destinatario")
+                            div
                         label(for="color")
                         h4 Color:
                         .colores
@@ -38,40 +40,43 @@ block content
                             div
                                 .negro.circulo
                                 input(type="radio" value="black" name="texto")
+                            div
                         h4 Tamaño de fuente:
                         .fuente
                             div
-                                h4 20px
-                                input(type="radio" value="20px" name="tamanio")
+                                h4 10px
+                                input(type="radio" value="10px" name="tamanio")
                             div
-                                h4 28px
-                                input(type="radio" value="28px" name="tamanio")
+                                h4 12px
+                                input(type="radio" value="12px" name="tamanio")
                             div
-                                h4 32px
-                                input(type="radio" value="32px" name="tamanio")
+                                h4 14px
+                                input(type="radio" value="14px" name="tamanio")
                             div
-                                h4 40px
-                                input(type="radio" value="40px" name="tamanio")
+                                h4 16px
+                                input(type="radio" value="16px" name="tamanio")
                             div
-                                h4 68px
-                                input(type="radio" value="68px" name="tamanio")
+                                h4 18px
+                                input(type="radio" value="18px" name="tamanio")
                         .monto
                             h4 Monto $
-                            input(type="number" id="monto")
-                        h4 Ubicacion:
+                            input(type="number" id="monto" name="monto")
+                            div
+                        h4 Alineacion:
                         .colores
                             div
                                 .rojo
-                                input(type="radio" value="red" name="ubicacion")
+                                    span Izq
+                                input(type="radio" value="left" name="alineacion")
                             div
                                 .azul
-                                input(type="radio" value="blue" name="ubicacion")
+                                    span Ctr
+                                input(type="radio" value="center" name="alineacion")
                             div
                                 .verde
-                                input(type="radio" value="green" name="ubicacion")
+                                    span Der
+                                input(type="radio" value="right" name="alineacion")
                             div
-                                .negro
-                                input(type="radio" value="black" name="ubicacion")
                         h4 Fondo:
                         .colores
                             div
@@ -86,4 +91,5 @@ block content
                             div
                                 .negro
                                 input(type="radio" value="black" name="fondo")
+                            div
                         input(type="button", value="Confirmar" id="confirmar")

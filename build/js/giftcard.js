@@ -12,39 +12,117 @@ var destinatario = document.getElementById("destinatario");
 var nombre = document.getElementById("nombre").children[0];
 var monto = document.getElementById("monto");
 var saldo = document.getElementById("saldo").children[0];
-var generado = false;
 var fondo = document.getElementsByClassName("vista-previa")[0].children[0];
 var letras = document.getElementsByClassName("texto");
 var colorFondo = document.getElementsByClassName("colores")[2];
+var alineacion = document.getElementsByClassName("colores")[1];
 var colorLetras = document.getElementsByClassName("colores")[0];
+var tamanioLetras = document.getElementsByClassName("fuente")[0];
+var formulario = document.getElementById("giftcard");
 document.getElementById("giftcard").reset();
 
-var cambiarColor = function cambiarColor(vistaPrevia, radios, propiedad) {
-  var seleccion = radios.getElementsByTagName("input");
+var camposNoVacios = function camposNoVacios() {
+  var camposVacios = 0;
 
-  var _iterator = _createForOfIteratorHelper(seleccion),
+  for (var _len = arguments.length, campos = new Array(_len), _key = 0; _key < _len; _key++) {
+    campos[_key] = arguments[_key];
+  }
+
+  for (var _i = 0, _campos = campos; _i < _campos.length; _i++) {
+    var campo = _campos[_i];
+
+    if (campo.value == "") {
+      var mensaje = "<p>Ingrese un ".concat(campo.name, " por favor</p>");
+      campo.nextElementSibling.innerHTML = mensaje;
+      camposVacios++;
+    } else campo.nextElementSibling.innerHTML = "";
+  }
+
+  if (camposVacios != 0) return false;
+  return true;
+};
+
+var campoLongitud = function campoLongitud(campo, minimo, maximo) {
+  if (campo.value != "" && campo.value.length < minimo || campo.value.length > maximo) {
+    var mensaje = "<p>El campo ".concat(campo.name, " debe tener desde ").concat(minimo, " hasta ").concat(maximo, " caracteres</p>");
+    campo.nextElementSibling.innerHTML = mensaje;
+    return false;
+  } else {
+    if (campo.value != "") {
+      campo.nextElementSibling.innerHTML = "";
+      return true;
+    }
+
+    return false;
+  }
+};
+
+var radioChecked = function radioChecked(campos) {
+  var radio = campos.getElementsByTagName("input");
+
+  var _iterator = _createForOfIteratorHelper(radio),
       _step;
 
   try {
-    var _loop = function _loop() {
-      var color = _step.value;
-      color.addEventListener("click", function () {
-        vistaPrevia.style = "".concat(propiedad, ":").concat(color.value);
-      });
-    };
-
     for (_iterator.s(); !(_step = _iterator.n()).done;) {
-      _loop();
+      var check = _step.value;
+      if (check.checked) return true;
     }
   } catch (err) {
     _iterator.e(err);
   } finally {
     _iterator.f();
   }
+
+  campos.lastElementChild.innerHTML = "<p>Seleccione una de las opciones</p>";
+  return false;
 };
 
-cambiarColor(fondo, colorFondo, "background-color");
-cambiarColor(letras, colorLetras, "color");
+var estilo = "";
+
+var cambiarPropiedad = function cambiarPropiedad(vistaPrevia, radios, propiedad, estadoLista) {
+  var seleccion = radios.getElementsByTagName("input");
+
+  var _iterator2 = _createForOfIteratorHelper(seleccion),
+      _step2;
+
+  try {
+    var _loop = function _loop() {
+      var color = _step2.value;
+      color.addEventListener("click", function () {
+        if (estadoLista) {
+          var _iterator3 = _createForOfIteratorHelper(vistaPrevia),
+              _step3;
+
+          try {
+            for (_iterator3.s(); !(_step3 = _iterator3.n()).done;) {
+              var elemento = _step3.value;
+              estilo += "".concat(propiedad, ":").concat(color.value, ";");
+              elemento.style = estilo;
+            }
+          } catch (err) {
+            _iterator3.e(err);
+          } finally {
+            _iterator3.f();
+          }
+        } else vistaPrevia.style = "".concat(propiedad, ":").concat(color.value);
+      });
+    };
+
+    for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
+      _loop();
+    }
+  } catch (err) {
+    _iterator2.e(err);
+  } finally {
+    _iterator2.f();
+  }
+};
+
+cambiarPropiedad(fondo, colorFondo, "background-color", false);
+cambiarPropiedad(letras, colorLetras, "color", true);
+cambiarPropiedad(letras, tamanioLetras, "font-size", true);
+cambiarPropiedad(letras, alineacion, "text-align", true);
 
 var generarcodigo = function generarcodigo() {
   var span = document.createElement("span");
@@ -64,8 +142,17 @@ var cargarDato = function cargarDato(ingresar, mostrar, evento) {
 cargarDato(destinatario, nombre, "keyup");
 cargarDato(monto, saldo, "keyup");
 boton.addEventListener("click", function () {
-  if (!generado) {
+  var camposIncorrectos = 0;
+  if (!camposNoVacios(destinatario, monto)) camposIncorrectos++;
+  if (!campoLongitud(destinatario, 4, 20)) camposIncorrectos++;
+  if (!campoLongitud(monto, 2, 4)) camposIncorrectos++;
+  if (!radioChecked(colorFondo)) camposIncorrectos++;
+  if (!radioChecked(colorLetras)) camposIncorrectos++;
+  if (!radioChecked(tamanioLetras)) camposIncorrectos++;
+  if (!radioChecked(alineacion)) camposIncorrectos++;
+
+  if (camposIncorrectos == 0) {
     numero_gift.appendChild(generarcodigo());
-    generado = true;
+    formulario.innerHTML = "<h2>Muchas gracias por adquirir la Gift Card</h2>";
   }
 });
