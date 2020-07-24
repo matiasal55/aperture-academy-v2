@@ -163,14 +163,23 @@ footer .copyright i {
   display: flex;
   justify-content: space-around;
 }
+.contacto .formulario-contacto {
+  width: 50%;
+}
 .contacto .formulario-contacto form input {
   margin: 10px 0px;
-  width: 95%;
   height: 30px;
 }
 .contacto .formulario-contacto form textarea {
   resize: none;
+}
+.contacto .formulario-contacto form input,
+.contacto .formulario-contacto form textarea {
   width: 95%;
+}
+.contacto .formulario-contacto form input + div,
+.contacto .formulario-contacto form textarea + div {
+  color: red;
 }
 .contacto .formulario-contacto form p,
 .contacto .formulario-contacto form span {

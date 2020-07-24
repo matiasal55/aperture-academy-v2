@@ -51,28 +51,36 @@
             <form action="">
               <div>
                 <label for="nombre"></label>
-                <input type="text" name="nombre" placeholder="Nombre"/><span>*</span>
+                <input type="text" name="nombre" placeholder="Nombre"/>
+                <div></div>
               </div>
               <div>
                 <label for="apellido"></label>
-                <input type="text" name="apellido" placeholder="Apellido"/><span>*</span>
+                <input type="text" name="apellido" placeholder="Apellido"/>
+                <div></div>
               </div>
               <div>
                 <label for="email"></label>
-                <input type="text" name="email" placeholder="Email"/><span>*</span>
+                <input type="text" name="email" placeholder="Email"/>
+                <div></div>
               </div>
               <div>
                 <label for="telefono"></label>
-                <input type="tel" name="telefono" placeholder="Telefono"/><span>*</span>
+                <input type="tel" name="telefono" placeholder="Telefono"/>
+                <div></div>
               </div>
               <div>
-                <textarea name="consulta" cols="30" rows="10" placeholder="Ingrese su consulta"></textarea>
+                <textarea name="mensaje" cols="30" rows="10" placeholder="Ingrese su consulta"></textarea>
+                <div></div>
+                <div>
+                  <p id="mensajeContador"><span id="contador">0</span><span> / </span><span id="maximo"> </span><span> caracteres.</span></p>
+                </div>
               </div>
               <div>
-                <p>Los campos con * son obligatorios</p>
+                <p>Todos los campos son obligatorios</p>
               </div>
               <div>
-                <button type="submit">Enviar</button>
+                <button type="submit" id="enviar">Enviar</button>
                 <button type="reset">Borrar los datos introducidos</button>
               </div>
             </form>

@@ -6,16 +6,23 @@
   justify-content: space-around;
 
   .formulario-contacto {
+    width: 50%;
     form {
       input {
         margin: 10px 0px;
-        width: 95%;
         height: 30px;
       }
 
       textarea {
         resize: none;
+      }
+
+      input,
+      textarea {
         width: 95%;
+        & + div {
+          color: red;
+        }
       }
 
       p,

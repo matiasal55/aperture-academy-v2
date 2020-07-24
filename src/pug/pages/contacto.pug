@@ -12,25 +12,32 @@ block content
                         div
                             label(for="nombre")
                             input(type="text", name="nombre" placeholder="Nombre")
-                            span *
+                            div
                         div
                             label(for="apellido")
                             input(type="text", name="apellido" placeholder="Apellido")
-                            span *
+                            div
                         div
                             label(for="email")
                             input(type="text", name="email" placeholder="Email")
-                            span *
+                            div
                         div
                             label(for="telefono")
                             input(type="tel", name="telefono" placeholder="Telefono")
-                            span *
+                            div
                         div
-                            textarea(name="consulta", cols="30", rows="10" placeholder="Ingrese su consulta")
+                            textarea(name="mensaje", cols="30", rows="10" placeholder="Ingrese su consulta")
+                            div
+                            div
+                                p#mensajeContador
+                                    span#contador 0
+                                    span  / 
+                                    span#maximo 
+                                    span  caracteres.
                         div
-                            p Los campos con * son obligatorios
+                            p Todos los campos son obligatorios
                         div
-                            button(type="submit") Enviar
+                            button(type="submit" id="enviar") Enviar
                             button(type="reset") Borrar los datos introducidos
             .datos-empresa
                 h1 Datos de contacto
