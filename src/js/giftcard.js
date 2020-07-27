@@ -48,6 +48,9 @@ const campoLongitud = (campo, minimo, maximo) => {
 const radioChecked = (campos) => {
   const radio = campos.getElementsByTagName("input");
   for (let check of radio) {
+    check.addEventListener("click", () => {
+      campos.lastElementChild.innerHTML = "";
+    });
     if (check.checked) return true;
   }
   campos.lastElementChild.innerHTML = "<p>Seleccione una de las opciones</p>";
@@ -69,10 +72,20 @@ const cambiarPropiedad = (vistaPrevia, radios, propiedad, estadoLista) => {
   }
 };
 
+const borrarMensajeError = (...campos) => {
+  for (let campo of campos) {
+    campo.addEventListener("keypress", () => {
+      if (campo.value.length >= 0) campo.nextElementSibling.innerHTML = "";
+    });
+  }
+};
+
 cambiarPropiedad(fondo, colorFondo, "background-color", false);
 cambiarPropiedad(letras, colorLetras, "color", true);
 cambiarPropiedad(letras, tamanioLetras, "font-size", true);
 cambiarPropiedad(letras, alineacion, "text-align", true);
+
+borrarMensajeError(destinatario, monto);
 
 const generarcodigo = () => {
   let span = document.createElement("span");

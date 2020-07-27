@@ -6,9 +6,12 @@ function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o =
 
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
-var flecha = document.getElementsByClassName("desplegar");
-var boton = document.getElementById("boton");
-var banderaBoton = 0;
+var flecha = document.getElementsByClassName("desplegar"); // Flechas que despliegan la informacion
+
+var boton = document.getElementById("boton"); // Boton Inscribirse
+
+var banderaBoton = 0; // Para que no vuelva a insertarse el mensaje de agradecimiento
+// Muestra la informacion de cada curso
 
 var _iterator = _createForOfIteratorHelper(flecha),
     _step;
@@ -42,5 +45,16 @@ boton.addEventListener("click", function (e) {
   if (banderaBoton == 0) {
     document.getElementsByClassName("principal")[0].appendChild(contenedor);
     banderaBoton++;
+    sumarInscripciones();
   }
 });
+var inscribirse = document.getElementsByClassName("inscribirse");
+var contadorInscriptos = sessionStorage.getItem("Inscriptos");
+if (contadorInscriptos != null) inscripciones.innerHTML = "<span>".concat(contadorInscriptos, "</span>");
+
+var sumarInscripciones = function sumarInscripciones() {
+  var inscripciones = document.getElementById("inscripciones");
+  contadorInscriptos++;
+  inscripciones.innerHTML = "<span>".concat(contadorInscriptos, "</span>");
+  sessionStorage.setItem("Inscriptos", contadorInscriptos);
+};

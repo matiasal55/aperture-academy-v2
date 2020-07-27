@@ -66,6 +66,9 @@ var radioChecked = function radioChecked(campos) {
   try {
     for (_iterator.s(); !(_step = _iterator.n()).done;) {
       var check = _step.value;
+      check.addEventListener("click", function () {
+        campos.lastElementChild.innerHTML = "";
+      });
       if (check.checked) return true;
     }
   } catch (err) {
@@ -119,10 +122,28 @@ var cambiarPropiedad = function cambiarPropiedad(vistaPrevia, radios, propiedad,
   }
 };
 
+var borrarMensajeError = function borrarMensajeError() {
+  for (var _len2 = arguments.length, campos = new Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
+    campos[_key2] = arguments[_key2];
+  }
+
+  var _loop2 = function _loop2() {
+    var campo = _campos2[_i2];
+    campo.addEventListener("keypress", function () {
+      if (campo.value.length >= 0) campo.nextElementSibling.innerHTML = "";
+    });
+  };
+
+  for (var _i2 = 0, _campos2 = campos; _i2 < _campos2.length; _i2++) {
+    _loop2();
+  }
+};
+
 cambiarPropiedad(fondo, colorFondo, "background-color", false);
 cambiarPropiedad(letras, colorLetras, "color", true);
 cambiarPropiedad(letras, tamanioLetras, "font-size", true);
 cambiarPropiedad(letras, alineacion, "text-align", true);
+borrarMensajeError(destinatario, monto);
 
 var generarcodigo = function generarcodigo() {
   var span = document.createElement("span");

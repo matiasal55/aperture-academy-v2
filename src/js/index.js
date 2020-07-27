@@ -28,3 +28,19 @@ function showSlides(n) {
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " active";
 }
+
+let inscribirse = document.getElementsByClassName("inscribirse");
+let contadorInscriptos = sessionStorage.getItem("Inscriptos");
+if (contadorInscriptos != null)
+  inscripciones.innerHTML = `<span>${contadorInscriptos}</span>`;
+
+const sumarInscripciones = () => {
+  let inscripciones = document.getElementById("inscripciones");
+  contadorInscriptos++;
+  inscripciones.innerHTML = `<span>${contadorInscriptos}</span>`;
+  sessionStorage.setItem("Inscriptos", contadorInscriptos);
+};
+
+for (let botones of inscribirse) {
+  botones.addEventListener("click", sumarInscripciones);
+}

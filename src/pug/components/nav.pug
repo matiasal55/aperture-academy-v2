@@ -1,14 +1,15 @@
 .menu-items 
     a(href=`${direccion}/index.html`) Home
 if !footer
-    .menu-items
-        .cursos
+    .menu-items.cursos
+        .cursos-seccion
             .cursos-titulo
                 a(href=`${direccion}/cursos.html`) Cursos
             .cursos-items
-                div HTML
-                div Docker
-                div Java
+                - let lista=["HTML","Java","Javascript","Docker","Go"];
+                each curso in lista
+                    div 
+                        a(href=`${direccion}/cursos/${curso}.html`) #{curso}
 .menu-items
     a(href=`${direccion}/calendario.html`) Calendario
 .menu-items

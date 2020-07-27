@@ -69,16 +69,22 @@ nav .menu-items:hover {
 nav .menu-items a {
   color: black;
 }
-nav .menu-items .cursos .cursos-items {
+nav .menu-items .cursos-seccion .cursos-items {
   display: none;
   position: absolute;
   left: -20;
   margin: 20px 0px;
   z-index: 10;
   padding: 20px;
-  background-color: red;
+  background-color: skyblue;
 }
-nav .menu-items .cursos:hover > .cursos-items {
+nav .menu-items .cursos-seccion .cursos-items div {
+  margin: 5px 0px;
+}
+nav .menu-items.cursos:hover {
+  cursor: pointer;
+}
+nav .menu-items.cursos:hover .cursos-items {
   display: block;
 }
 

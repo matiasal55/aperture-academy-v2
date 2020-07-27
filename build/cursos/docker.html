@@ -16,19 +16,21 @@
           <input type="text" id="datoabuscar"/>
           <button type="submit">Buscar</button>
         </div>
-        <div class="carrito"><span>0</span><img src="../img/shopping-blanco.png"/></div>
+        <div class="carrito"><span id="inscripciones">0</span><img src="../img/shopping-blanco.png"/></div>
       </div>
     </header>
     <nav>
       <div class="menu">
         <div class="menu-items"> <a href="../index.html">Home</a></div>
-        <div class="menu-items">
-          <div class="cursos">
+        <div class="menu-items cursos">
+          <div class="cursos-seccion">
             <div class="cursos-titulo"><a href="../cursos.html">Cursos</a></div>
             <div class="cursos-items">
-              <div>HTML</div>
-              <div>Docker</div>
-              <div>Java</div>
+              <div> <a href="../cursos/HTML.html">HTML</a></div>
+              <div> <a href="../cursos/Java.html">Java</a></div>
+              <div> <a href="../cursos/Javascript.html">Javascript</a></div>
+              <div> <a href="../cursos/Docker.html">Docker</a></div>
+              <div> <a href="../cursos/Go.html">Go</a></div>
             </div>
           </div>
         </div>
@@ -53,7 +55,7 @@
             <h3>Valor: $3500</h3>
             <h3>Duración del curso: 9hs.</h3>
             <h3>Requisitos: Se recomienda tener una noción básica de linux.</h3>
-            <input type="button" value="Inscribirse" id="boton"/>
+            <input class="inscribirse" type="button" value="Inscribirse" id="boton"/>
           </div>
           <div class="contenidos">
             <h1>Contenidos por clase</h1>

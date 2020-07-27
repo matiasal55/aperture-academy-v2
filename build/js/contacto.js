@@ -13,6 +13,7 @@ var telefono = document.getElementsByName("telefono")[0];
 var mensaje = document.getElementsByTagName("textarea")[0];
 var formulario = document.getElementsByTagName("form")[0];
 var boton = document.getElementById("enviar");
+formulario.reset();
 
 var camposNoVacios = function camposNoVacios() {
   var camposVacios = 0;

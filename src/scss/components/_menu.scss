@@ -1,5 +1,7 @@
+$botones: skyblue;
+
 nav {
-  background-color: skyblue;
+  background-color: $botones;
   .menu {
     justify-content: initial;
 
@@ -15,7 +17,7 @@ nav {
         color: black;
       }
 
-      .cursos {
+      .cursos-seccion {
         .cursos-items {
           display: none;
           position: absolute;
@@ -23,13 +25,24 @@ nav {
           margin: 20px 0px;
           z-index: 10;
           padding: 20px;
-          background-color: red;
+          background-color: $botones;
+
+          div {
+            margin: 5px 0px;
+          }
         }
 
-        &:hover {
-          > .cursos-items {
-            display: block;
-          }
+        // &:hover {
+        //   > .cursos-items {
+        //     display: block;
+        //   }
+        // }
+      }
+
+      &.cursos:hover {
+        cursor: pointer;
+        .cursos-items {
+          display: block;
         }
       }
     }

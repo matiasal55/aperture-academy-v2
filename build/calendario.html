@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Aperture Academy</title>
-    <meta name="viewport" content="width=device-width, user-scalable=no"/>
+    <meta name="viewport" content="width=device-width, user-scalable=no"/><link href='./css/main.css' rel='stylesheet' />
     <link rel="stylesheet" href="./css/calendario.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous"/>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&amp;display=swap" rel="stylesheet"/>
@@ -16,19 +16,21 @@
           <input type="text" id="datoabuscar"/>
           <button type="submit">Buscar</button>
         </div>
-        <div class="carrito"><span>0</span><img src="./img/shopping-blanco.png"/></div>
+        <div class="carrito"><span id="inscripciones">0</span><img src="./img/shopping-blanco.png"/></div>
       </div>
     </header>
     <nav>
       <div class="menu">
         <div class="menu-items"> <a href="./index.html">Home</a></div>
-        <div class="menu-items">
-          <div class="cursos">
+        <div class="menu-items cursos">
+          <div class="cursos-seccion">
             <div class="cursos-titulo"><a href="./cursos.html">Cursos</a></div>
             <div class="cursos-items">
-              <div>HTML</div>
-              <div>Docker</div>
-              <div>Java</div>
+              <div> <a href="./cursos/HTML.html">HTML</a></div>
+              <div> <a href="./cursos/Java.html">Java</a></div>
+              <div> <a href="./cursos/Javascript.html">Javascript</a></div>
+              <div> <a href="./cursos/Docker.html">Docker</a></div>
+              <div> <a href="./cursos/Go.html">Go</a></div>
             </div>
           </div>
         </div>
@@ -44,7 +46,10 @@
         </div>
       </div>
     </nav>
-    <section></section>
+    <section>
+      <div id="calendar"></div>
+    </section><script src='./js/main.js'></script>
+<script src='./js/locale-all.js'></script>
     <footer>
       <div class="footer">
         <div class="copyright"><i class="far fa-copyright"> </i><span>2020. Academy. Todos los derechos reservados.</span></div>
