@@ -1,7 +1,7 @@
-$botones: skyblue;
+@import "./mixins";
 
 nav {
-  background-color: $botones;
+  background-color: $color-nav;
   .menu {
     justify-content: initial;
 
@@ -9,12 +9,8 @@ nav {
       padding: 20px;
       display: block;
 
-      &:hover {
-        background-color: white;
-      }
-
-      a {
-        color: black;
+      &:hover:not(:last-child) {
+        background-color: $fondo-botones;
       }
 
       .cursos-seccion {
@@ -25,18 +21,12 @@ nav {
           margin: 20px 0px;
           z-index: 10;
           padding: 20px;
-          background-color: $botones;
+          background-color: $color-nav;
 
           div {
             margin: 5px 0px;
           }
         }
-
-        // &:hover {
-        //   > .cursos-items {
-        //     display: block;
-        //   }
-        // }
       }
 
       &.cursos:hover {

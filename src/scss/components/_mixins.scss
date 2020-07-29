@@ -1,5 +1,8 @@
 $fondo1: #d3d3d3;
 $fondo2: #808080;
+$fondo-botones: white;
+$color-nav: skyblue;
+$color-a: black;
 $responsive1: 768px;
 @mixin formatoElementosHome {
   display: flex;
@@ -11,4 +14,8 @@ $responsive1: 768px;
     color: white;
     text-align: center;
   }
+}
+
+a {
+  color: $color-a;
 }

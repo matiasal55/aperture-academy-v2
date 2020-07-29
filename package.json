@@ -8,8 +8,7 @@
     "pug": "pug --watch --pretty src/pug/pages --out build",
     "sass": "sass src/scss:build/css --watch",
     "babel": "babel src/js -d build/js/ --watch",
-    "webpack": "webpack --watch",
-    "webpack:giftcard": "webpack --config src/js/webpack/giftcard.config.js"
+    "webpack": "webpack --watch"
   },
   "keywords": [],
   "author": "",

@@ -1,3 +1,10 @@
+import { mostrarCantidadInscripciones } from "./components/contadorCarrito";
+import {
+  campoLongitud,
+  camposNoVacios,
+  borrarMensajeError,
+} from "./components/validaciones";
+
 const boton = document.getElementById("confirmar");
 let numero_gift = document.getElementById("numero").children[0];
 let destinatario = document.getElementById("destinatario");
@@ -14,36 +21,6 @@ let tamanioLetras = document.getElementsByClassName("fuente")[0];
 const formulario = document.getElementById("giftcard");
 
 document.getElementById("giftcard").reset();
-
-const camposNoVacios = (...campos) => {
-  let camposVacios = 0;
-  for (let campo of campos) {
-    if (campo.value == "") {
-      const mensaje = `<p>Ingrese un ${campo.name} por favor</p>`;
-      campo.nextElementSibling.innerHTML = mensaje;
-      camposVacios++;
-    } else campo.nextElementSibling.innerHTML = "";
-  }
-  if (camposVacios != 0) return false;
-  return true;
-};
-
-const campoLongitud = (campo, minimo, maximo) => {
-  if (
-    (campo.value != "" && campo.value.length < minimo) ||
-    campo.value.length > maximo
-  ) {
-    const mensaje = `<p>El campo ${campo.name} debe tener desde ${minimo} hasta ${maximo} caracteres</p>`;
-    campo.nextElementSibling.innerHTML = mensaje;
-    return false;
-  } else {
-    if (campo.value != "") {
-      campo.nextElementSibling.innerHTML = "";
-      return true;
-    }
-    return false;
-  }
-};
 
 const radioChecked = (campos) => {
   const radio = campos.getElementsByTagName("input");
@@ -72,14 +49,6 @@ const cambiarPropiedad = (vistaPrevia, radios, propiedad, estadoLista) => {
   }
 };
 
-const borrarMensajeError = (...campos) => {
-  for (let campo of campos) {
-    campo.addEventListener("keypress", () => {
-      if (campo.value.length >= 0) campo.nextElementSibling.innerHTML = "";
-    });
-  }
-};
-
 cambiarPropiedad(fondo, colorFondo, "background-color", false);
 cambiarPropiedad(letras, colorLetras, "color", true);
 cambiarPropiedad(letras, tamanioLetras, "font-size", true);
@@ -94,6 +63,7 @@ const generarcodigo = () => {
   return span;
 };
 
+// Muestra los datos en la vista previa
 const cargarDato = (ingresar, mostrar, evento) => {
   let span = mostrar.appendChild(document.createElement("span"));
   ingresar.addEventListener(evento, () => {
@@ -105,6 +75,7 @@ const cargarDato = (ingresar, mostrar, evento) => {
 cargarDato(destinatario, nombre, "keyup");
 cargarDato(monto, saldo, "keyup");
 
+// Chequea que los datos estén correctos
 boton.addEventListener("click", () => {
   let camposIncorrectos = 0;
   if (!camposNoVacios(destinatario, monto)) camposIncorrectos++;

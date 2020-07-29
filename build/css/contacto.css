@@ -1,3 +1,7 @@
+a {
+  color: black;
+}
+
 * {
   font-family: "Open Sans", sans-serif;
   text-decoration: none;
@@ -49,8 +53,24 @@ header {
   min-width: 50px;
   max-width: 200px;
 }
+.header .carrito span {
+  position: absolute;
+  left: 30;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  background-color: black;
+  color: white;
+  z-index: 10;
+  padding: 5px;
+  border-radius: 50%;
+}
 .header .carrito img {
   width: 50px;
+}
+
+a {
+  color: black;
 }
 
 nav {
@@ -63,11 +83,8 @@ nav .menu-items {
   padding: 20px;
   display: block;
 }
-nav .menu-items:hover {
+nav .menu-items:hover:not(:last-child) {
   background-color: white;
-}
-nav .menu-items a {
-  color: black;
 }
 nav .menu-items .cursos-seccion .cursos-items {
   display: none;
@@ -165,6 +182,10 @@ footer .copyright i {
     margin: 10px 0px;
   }
 }
+a {
+  color: black;
+}
+
 .contacto {
   display: flex;
   justify-content: space-around;
