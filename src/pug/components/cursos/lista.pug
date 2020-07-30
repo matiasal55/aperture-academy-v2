@@ -12,7 +12,7 @@ include ./javascript
         div
            
             .img
-                img(src=`./img/cursos/${curso.titulo}.png`)
+                img(src=`./img/cursos/${curso.titulo.toLowerCase()}.png`)
             .detalles
                 h1
                     a(href=`./cursos/${curso.titulo.toLowerCase()}.html`) Curso de #{curso.titulo}
