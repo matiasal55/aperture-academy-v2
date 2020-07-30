@@ -9,7 +9,7 @@ if !footer
                 - let lista=["HTML","Java","Javascript","Docker","Go"];
                 each curso in lista
                     div 
-                        a(href=`${direccion}/cursos/${curso}.html`) #{curso}
+                        a(href=`${direccion}/cursos/${curso.toLowerCase()}.html`) #{curso}
 .menu-items
     a(href=`${direccion}/calendario.html`) Calendario
 .menu-items
