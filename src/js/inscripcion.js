@@ -1,4 +1,5 @@
 import { mostrarCantidadInscripciones } from "./components/contadorCarrito";
+import menu_responsive from "./components/menuResponsive";
 
 class Alumno {
   constructor(nombre, apellido, dni) {

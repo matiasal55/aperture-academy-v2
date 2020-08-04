@@ -1,4 +1,3 @@
-let inscribirse = document.getElementsByClassName("inscribirse");
 let contadorInscriptos = sessionStorage.getItem("Inscriptos");
 if (contadorInscriptos != null)
   inscripciones.innerHTML = `${contadorInscriptos}`;

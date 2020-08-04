@@ -1,9 +1,10 @@
 header
     .header
-        .responsive
+        .responsive#boton-responsive
             <i class="fas fa-bars"></i>
         .logo
-            img(src=`${direccion}/img/logo.png`)
+            a(href=`${direccion}/index.html`)
+                img(src=`${direccion}/img/logo.png`)
         .buscador
             input(type="text" id="datoabuscar")
             button(type="submit") Buscar

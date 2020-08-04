@@ -2,6 +2,7 @@ import {
   mostrarCantidadInscripciones,
   sumarInscripciones,
 } from "./components/contadorCarrito";
+import menu_responsive from "./components/menuResponsive";
 
 let flecha = document.getElementsByClassName("desplegar"); // Flechas que despliegan la informacion
 let boton = document.getElementById("boton"); // Boton Inscribirse

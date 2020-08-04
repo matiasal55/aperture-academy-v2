@@ -3,8 +3,9 @@ import {
   camposNoVacios,
   campoLongitud,
   borrarMensajeError,
-  emailCorrecto,
+  campoCorrecto,
 } from "./components/validaciones";
+import menu_responsive from "./components/menuResponsive";
 
 let nombre = document.getElementsByName("nombre")[0];
 let apellido = document.getElementsByName("apellido")[0];
@@ -57,13 +58,19 @@ mensaje.addEventListener("keydown", contador);
 // Verifica que el formulario esté completo. En caso afirmativo muestra un alert, en caso negativo impide que se cargue el formulario.
 formulario.addEventListener("submit", (event) => {
   let camposIncorrectos = 0;
+  const regexNombreApellido = /[a-z]/gi;
+  const regexMail = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+  const regexTelefono = /[0-9]{10,20}/;
   if (!camposNoVacios(nombre, apellido, email, telefono, mensaje))
     camposIncorrectos++;
   if (!campoLongitud(mensaje, 100, 500)) camposIncorrectos++;
   if (!campoLongitud(telefono, 10, 15)) camposIncorrectos++;
-  if (!emailCorrecto(email)) camposIncorrectos++;
+  if (!campoCorrecto(nombre, regexNombreApellido)) camposIncorrectos++;
+  if (!campoCorrecto(apellido, regexNombreApellido)) camposIncorrectos++;
+  if (!campoCorrecto(telefono, regexTelefono)) camposIncorrectos++;
+  if (!campoCorrecto(email, regexMail)) camposIncorrectos++;
   if (camposIncorrectos == 0) {
-    alert("Muchas gracias por adquirir la Gift Card");
+    alert("Muchas gracias por contactarse");
   } else {
     event.preventDefault();
   }

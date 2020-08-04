@@ -1,5 +1,10 @@
-import { mostrarCantidadInscripciones } from "./components/contadorCarrito";
+import {
+  mostrarCantidadInscripciones,
+  sumarInscripciones,
+} from "./components/contadorCarrito";
+import menu_responsive from "./components/menuResponsive";
 
+menu_responsive;
 ///////// Slider
 var slideIndex = 1;
 showSlides(slideIndex);
@@ -31,6 +36,8 @@ function showSlides(n) {
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " active";
 }
+
+let inscribirse = document.getElementsByClassName("inscribirse");
 
 for (let botones of inscribirse) {
   botones.addEventListener("click", sumarInscripciones);

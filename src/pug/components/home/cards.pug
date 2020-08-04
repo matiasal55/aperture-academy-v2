@@ -10,7 +10,7 @@ include ../cursos/java
     each curso in cursos
         div
             .imagen
-                img(src=`./img/cursos/${curso.titulo}.png`)
+                img(src=`./img/cursos/${curso.titulo.toLowerCase()}.png`)
             .titulo
                 h1 #{curso.titulo}
             .horas

@@ -3,7 +3,11 @@ import {
   campoLongitud,
   camposNoVacios,
   borrarMensajeError,
+  campoCorrecto,
 } from "./components/validaciones";
+import menu_responsive from "./components/menuResponsive";
+
+document.getElementById("giftcard").reset();
 
 const boton = document.getElementById("confirmar");
 let numero_gift = document.getElementById("numero").children[0];
@@ -19,8 +23,6 @@ let alineacion = document.getElementsByClassName("colores")[1];
 let colorLetras = document.getElementsByClassName("colores")[0];
 let tamanioLetras = document.getElementsByClassName("fuente")[0];
 const formulario = document.getElementById("giftcard");
-
-document.getElementById("giftcard").reset();
 
 const radioChecked = (campos) => {
   const radio = campos.getElementsByTagName("input");
@@ -49,13 +51,6 @@ const cambiarPropiedad = (vistaPrevia, radios, propiedad, estadoLista) => {
   }
 };
 
-cambiarPropiedad(fondo, colorFondo, "background-color", false);
-cambiarPropiedad(letras, colorLetras, "color", true);
-cambiarPropiedad(letras, tamanioLetras, "font-size", true);
-cambiarPropiedad(letras, alineacion, "text-align", true);
-
-borrarMensajeError(destinatario, monto);
-
 const generarcodigo = () => {
   let span = document.createElement("span");
   const numero = parseInt(Math.random() * 100000);
@@ -72,12 +67,21 @@ const cargarDato = (ingresar, mostrar, evento) => {
   });
 };
 
+cambiarPropiedad(fondo, colorFondo, "background-color", false);
+cambiarPropiedad(letras, colorLetras, "color", true);
+cambiarPropiedad(letras, tamanioLetras, "font-size", true);
+cambiarPropiedad(letras, alineacion, "text-align", true);
+
+borrarMensajeError(destinatario, monto);
+
 cargarDato(destinatario, nombre, "keyup");
 cargarDato(monto, saldo, "keyup");
 
 // Chequea que los datos estén correctos
 boton.addEventListener("click", () => {
   let camposIncorrectos = 0;
+  const regexDestinatario = /[a-z]/gi;
+  const regexMonto = /[0-9]{2,4}/;
   if (!camposNoVacios(destinatario, monto)) camposIncorrectos++;
   if (!campoLongitud(destinatario, 4, 20)) camposIncorrectos++;
   if (!campoLongitud(monto, 2, 4)) camposIncorrectos++;
@@ -85,6 +89,7 @@ boton.addEventListener("click", () => {
   if (!radioChecked(colorLetras)) camposIncorrectos++;
   if (!radioChecked(tamanioLetras)) camposIncorrectos++;
   if (!radioChecked(alineacion)) camposIncorrectos++;
+  if (!campoCorrecto(destinatario, regexDestinatario)) camposIncorrectos++;
   if (camposIncorrectos == 0) {
     numero_gift.appendChild(generarcodigo());
     formulario.innerHTML = "<h2>Muchas gracias por adquirir la Gift Card</h2>";

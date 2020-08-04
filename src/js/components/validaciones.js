@@ -28,14 +28,12 @@ export const campoLongitud = (campo, minimo, maximo) => {
   }
 };
 
-// Verifica que el email se ingresó correctamente
-export const emailCorrecto = (campo) => {
-  const regex = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+export const campoCorrecto = (campo, regex) => {
   if (regex.test(campo.value)) {
     campo.nextElementSibling.innerHTML = "";
     return true;
   } else if (campo.value != "") {
-    campo.nextElementSibling.innerHTML = "<p>Ingrese un email correcto</p>";
+    campo.nextElementSibling.innerHTML = `<p>Ingrese un ${campo.name} correcto</p>`;
   }
   return false;
 };
