@@ -8,7 +8,9 @@
     "pug": "pug --watch --pretty src/pug/pages --out build",
     "sass": "sass src/scss:build/css --watch",
     "babel": "babel src/js -d build/js/ --watch",
-    "webpack": "webpack --watch"
+    "webpack": "webpack --watch",
+    "jest": "jest",
+    "coverage": "jest --coverage"
   },
   "keywords": [],
   "author": "",
@@ -22,6 +24,7 @@
     "@babel/core": "^7.10.5",
     "@babel/preset-env": "^7.10.4",
     "babel-loader": "^8.1.0",
+    "jest": "^26.4.0",
     "webpack": "^4.44.0",
     "webpack-cli": "^3.3.12"
   }

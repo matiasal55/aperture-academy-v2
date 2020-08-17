@@ -58,17 +58,25 @@ mensaje.addEventListener("keydown", contador);
 // Verifica que el formulario esté completo. En caso afirmativo muestra un alert, en caso negativo impide que se cargue el formulario.
 formulario.addEventListener("submit", (event) => {
   let camposIncorrectos = 0;
-  const regexNombreApellido = /[a-z]/gi;
+  const regexNombreApellido = /^([^0-9]*)$/gi;
   const regexMail = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
-  const regexTelefono = /[0-9]{10,20}/;
-  if (!camposNoVacios(nombre, apellido, email, telefono, mensaje))
+  const regexTelefono = /^[0-9]{10,20}$/;
+  if (
+    !camposNoVacios(
+      nombre.value,
+      apellido.value,
+      email.value,
+      telefono.value,
+      mensaje.value
+    )
+  )
     camposIncorrectos++;
-  if (!campoLongitud(mensaje, 100, 500)) camposIncorrectos++;
-  if (!campoLongitud(telefono, 10, 15)) camposIncorrectos++;
-  if (!campoCorrecto(nombre, regexNombreApellido)) camposIncorrectos++;
-  if (!campoCorrecto(apellido, regexNombreApellido)) camposIncorrectos++;
-  if (!campoCorrecto(telefono, regexTelefono)) camposIncorrectos++;
-  if (!campoCorrecto(email, regexMail)) camposIncorrectos++;
+  if (!campoLongitud(mensaje.value, 100, 500)) camposIncorrectos++;
+  if (!campoLongitud(telefono.value, 10, 15)) camposIncorrectos++;
+  if (!campoCorrecto(nombre.value, regexNombreApellido)) camposIncorrectos++;
+  if (!campoCorrecto(apellido.value, regexNombreApellido)) camposIncorrectos++;
+  if (!campoCorrecto(telefono.value, regexTelefono)) camposIncorrectos++;
+  if (!campoCorrecto(email.value, regexMail)) camposIncorrectos++;
   if (camposIncorrectos == 0) {
     alert("Muchas gracias por contactarse");
   } else {
