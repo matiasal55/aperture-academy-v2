@@ -1,0 +1,144 @@
+
+<html>
+  <head>
+    <title>Aperture Academy</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no"/>
+    <link rel="stylesheet" href="../css/agregar_curso.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&amp;display=swap" rel="stylesheet"/>
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <div class="responsive" id="boton-responsive"><i class="fas fa-bars"></i></div>
+        <div class="logo"><a href="../index.html"><img src="../img/logo.png"/></a></div>
+        <div class="buscador">
+          <input type="text" id="datoabuscar"/>
+          <button type="submit">Buscar</button>
+        </div>
+        <div class="carrito"><span id="inscripciones"> </span><img src="../img/shopping-blanco.png"/></div>
+      </div>
+    </header>
+    <nav>
+      <div class="menu">
+        <div class="menu-items"> <a href="../index.html">Home</a></div>
+        <div class="menu-items cursos">
+          <div class="cursos-seccion">
+            <div class="cursos-titulo"><a href="../cursos.html">Cursos</a></div>
+            <div class="cursos-items">
+              <div> <a href="../cursos/html.html">HTML</a></div>
+              <div> <a href="../cursos/java.html">Java</a></div>
+              <div> <a href="../cursos/javascript.html">Javascript</a></div>
+              <div> <a href="../cursos/docker.html">Docker</a></div>
+              <div> <a href="../cursos/go.html">Go</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="menu-items"><a href="../calendario.html">Calendario</a></div>
+        <div class="menu-items"><a href="../giftcard.html">Gift Card</a></div>
+        <div class="menu-items"><a href="../inscripcion.html">Inscripción</a></div>
+        <div class="menu-items"><a href="../contacto.html">Contacto</a></div>
+        <div class="menu-items">
+          <div class="buscador-responsive">
+            <input type="text" id="datoabuscar"/>
+            <button type="submit">Buscar</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section>
+      <div>
+        <h1>Cargar curso</h1>
+      </div>
+      <div class="formulario">
+        <form id="form">
+          <div class="curso-campo">
+            <label for="titulo">Título: </label>
+            <input class="input" type="text" name="titulo" placeholder="Ingrese el nombre del curso"/>
+            <div class="error"></div>
+          </div>
+          <div class="curso-campo">
+            <label for="detalles">Detalles: </label>
+            <input class="input" type="text" name="detalles" placeholder="Ingrese el detalle general del curso"/>
+            <div class="error"></div>
+          </div>
+          <div class="curso-campo">
+            <label for="precio">Precio: </label>
+            <input class="input" type="number" name="precio" placeholder="Ingrese el precio del curso"/>
+            <div class="error"></div>
+          </div>
+          <div class="curso-campo">
+            <label for="horas">Cantidad de horas: </label>
+            <input class="input" type="number" name="horas" placeholder="Ingrese la cantidad de horas totales del curso"/>
+            <div class="error"></div>
+          </div>
+          <div class="curso-campo">
+            <label for="requisitos">Requisitos: </label>
+            <input class="input" type="text" name="requisitos" placeholder="Ingrese los requisitos necesarios para hacer el curso"/>
+            <div class="error"></div>
+          </div>
+          <div class="curso-campo">
+            <label for="contenido">Contenidos: </label>
+            <div class="contenido">
+              <div class="carga-contenido">
+                <div class="unidad">
+                  <div class="titulo">
+                    <label for="unidad1-titulo">Titulo de la Unidad: </label>
+                    <input class="input unidad-titulo" type="text" placeholder="Ingrese el título de la unidad"/>
+                    <div class="error"></div>
+                  </div>
+                  <div class="tematicas">
+                    <div class="tematica">
+                      <label for="unidad1-tematica">Titulo de la temática de la unidad: </label>
+                      <input class="unidad-tematica" type="text" placeholder="Ingrese el título de la temática de la unidad"/>
+                    </div>
+                  </div>
+                  <div class="opciones">
+                    <input class="boton-tematica" type="button" value="Agregar temática" name="agregar"/>
+                    <input class="boton-borrar" type="button" value="Borrar unidad" name="borrar"/>
+                  </div>
+                </div>
+              </div>
+              <div class="agregar-contenido">
+                <input type="button" value="Agregar unidad" id="boton-contenido"/>
+              </div>
+            </div>
+          </div>
+          <div class="curso-campo">
+            <label for="profesor">Profesor: </label>
+            <select name="profesor" id="profesor">
+              <option value="default" selected="selected" disabled="disabled">Seleccione un profesor</option>
+            </select>
+            <div class="error"></div>
+            <div class="informacion-profesor"></div>
+          </div>
+          <div class="opciones-final">
+            <div class="button">
+              <input type="button" id="enviar" value="Enviar"/>
+              <input type="reset" value="Restablecer"/>
+            </div>
+            <div class="error"></div>
+          </div>
+        </form>
+      </div>
+    </section>
+    <footer>
+      <div class="footer">
+        <div class="copyright"><i class="far fa-copyright"> </i><span>2020. Academy. Todos los derechos reservados.</span></div>
+        <div class="navfooter">   
+          <div class="menu-items"> <a href="../index.html">Home</a></div>
+          <div class="menu-items"><a href="../calendario.html">Calendario</a></div>
+          <div class="menu-items"><a href="../giftcard.html">Gift Card</a></div>
+          <div class="menu-items"><a href="../inscripcion.html">Inscripción</a></div>
+          <div class="menu-items"><a href="../contacto.html">Contacto</a></div>
+        </div>
+        <div class="redes">
+          <div><i class="fab fa-facebook-square"></i> <a href="#">Seguinos en Facebook</a></div>
+          <div><i class="fab fa-twitter-square"></i> <a href="#">Seguinos en Twitter</a></div>
+          <div><i class="fab fa-instagram"></i> <a href="#">Seguinos en Instagram</a></div>
+        </div>
+      </div>
+    </footer>
+    <script src="../js/agregar_curso.js"></script>
+  </body>
+</html>

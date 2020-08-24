@@ -183,10 +183,6 @@ footer .copyright i {
     margin: 10px 0px;
   }
 }
-a {
-  color: black;
-}
-
 .panel {
   display: flex;
   justify-content: center;

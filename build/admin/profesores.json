@@ -1,0 +1,16 @@
+{
+  "profesores": [
+    {
+      "id": 1,
+      "nombre": "Pablo Tilotta",
+      "descripcion": "Desde la experiencia en el Análisis de Sistemas, me he destacado en brindar soluciones a sectores complejos como Administración, Marketing, Tesorería, Logística y Distribución, Recursos Humanos con mas de 2000 soluciones y sistemas (no siempre la solución es un sistema o programa) a lo largo de 30 años ininterrumpidos.",
+      "estrellas": 4
+    },
+    {
+      "id": 2,
+      "nombre": "Adrian Heras",
+      "descripcion": "Seis años de experiencia en desarrollo web. Apasionado de las nuevas tecnologías y en especial del ecosistema de javascript. Creador de contenido audiovisual formativo relacionado con el desarrollo web full-stack.",
+      "estrellas": 4
+    }
+  ]
+}

@@ -2,7 +2,7 @@ export const camposNoVacios = (...campos) => {
   let camposVacios = 0;
   for (let campo of campos) {
     if (campo.value == "") {
-      const mensaje = `<p>Ingrese un ${campo.name} por favor</p>`;
+      const mensaje = `<p>Ingrese ${campo.name} por favor</p>`;
       campo.nextElementSibling.innerHTML = mensaje;
       camposVacios++;
     } else campo.nextElementSibling.innerHTML = "";

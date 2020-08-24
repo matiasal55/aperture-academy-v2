@@ -183,10 +183,6 @@ footer .copyright i {
     margin: 10px 0px;
   }
 }
-a {
-  color: black;
-}
-
 .detalles {
   width: 40%;
   display: flex;
@@ -260,4 +256,4 @@ a {
   }
 }
 
-/*# sourceMappingURL=cursos-detalles.css.map */
+/*# sourceMappingURL=cursos_detalles.css.map */

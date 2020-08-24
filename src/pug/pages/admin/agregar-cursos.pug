@@ -1,0 +1,61 @@
+extends ../../components/master
+
+block estilo
+    - estilos= "agregar_curso"
+    - js="agregar_curso"
+    - direccion=".."
+block content
+    section
+        div
+            h1 Cargar curso
+        .formulario
+            form#form
+                .curso-campo
+                    label(for="titulo") Título: 
+                    input(type="text" class="input" name="titulo" placeholder="Ingrese el nombre del curso")
+                    .error
+                .curso-campo
+                    label(for="detalles") Detalles: 
+                    input(type="text" class="input" name="detalles" placeholder="Ingrese el detalle general del curso")
+                    .error
+                .curso-campo
+                    label(for="precio") Precio: 
+                    input(type="number" class="input" name="precio" placeholder="Ingrese el precio del curso")
+                    .error
+                .curso-campo
+                    label(for="horas") Cantidad de horas: 
+                    input(type="number" class="input" name="horas" placeholder="Ingrese la cantidad de horas totales del curso")
+                    .error
+                .curso-campo
+                    label(for="requisitos") Requisitos: 
+                    input(type="text" class="input" name="requisitos" placeholder="Ingrese los requisitos necesarios para hacer el curso")
+                    .error
+                .curso-campo
+                    label(for="contenido") Contenidos: 
+                    .contenido
+                        .carga-contenido
+                            .unidad
+                                .titulo
+                                    label(for="unidad1-titulo") Titulo de la Unidad: 
+                                    input(type="text" class="input unidad-titulo" placeholder="Ingrese el título de la unidad")
+                                    .error
+                                .tematicas
+                                    .tematica
+                                        label(for="unidad1-tematica") Titulo de la temática de la unidad: 
+                                        input(type="text" class="unidad-tematica" placeholder="Ingrese el título de la temática de la unidad")
+                                .opciones
+                                    input(type="button", value="Agregar temática" name="agregar" class="boton-tematica")
+                                    input(type="button", value="Borrar unidad" name="borrar" class="boton-borrar")
+                        .agregar-contenido
+                            input(type="button", value="Agregar unidad" id="boton-contenido")
+                .curso-campo
+                    label(for="profesor") Profesor: 
+                    select(name="profesor" id="profesor")
+                        option(value="default" selected disabled) Seleccione un profesor
+                    .error
+                    .informacion-profesor
+                .opciones-final
+                    .button
+                        input(type="button" id="enviar", value="Enviar")
+                        input(type="reset", value="Restablecer")
+                    .error

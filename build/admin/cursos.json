@@ -1,0 +1,75 @@
+{
+  "cursos": [
+    {
+      "id": 1,
+      "titulo": "HTML",
+      "detalles": "Aprende a desarrollar tus propias plantillas Web desde cero, usando los últimos estándares de Html 5",
+      "precio": 2500,
+      "horas": 4,
+      "requisitos": "El curso empieza desde 0, no necesitas ningún conocimiento previo.",
+      "contenidos": [
+        {
+          "titulo": "Comenzando en HTML",
+          "tematicas": [
+            "Definición de Html",
+            "¿Qué editor usar?",
+            "¿Qué es un atributo?",
+            "La etiqueta DOCTYPE",
+            "El atributo CHARSET"
+          ]
+        },
+        {
+          "titulo": "Textos, anclas e imágenes",
+          "tematicas": [
+            "Encabezados y párrafos",
+            "Negrita,énfasis,cursiva,span y salto de línea",
+            "Anclas",
+            "Imagenes"
+          ]
+        },
+        {
+          "titulo": "Listas, tablas y contenidos",
+          "tematicas": ["Listas", "Tablas", "Comentarios"]
+        },
+        {
+          "titulo": "Formularios",
+          "tematicas": [
+            "Introducción a formularios e inputs",
+            "La etiqueta select",
+            "El atributo placeholder y required",
+            "El checkbox",
+            "El textarea",
+            "El input datepicker y el colorpicker",
+            "El input password",
+            "El input email y el input file",
+            "El input radio",
+            "El input number y el input range"
+          ]
+        },
+        {
+          "titulo": "HTML5",
+          "tematicas": [
+            "Etiqueta Header y Nav",
+            "Etiqueta Main, Section y Div",
+            "Etiqueta Article y Aside",
+            "Etiqueta Footer"
+          ]
+        }
+      ],
+      "profesor": {
+        "nombre": "Andres Sosa Arevalo",
+        "descripcion": "Hola a todos, soy estudiante de derecho de la universidad Sergio Arboleda de Colombia, tambien soy desarrollador Web, hice trabajos remotos en la plataforma de Workana, tambien he ayudado en linea a muchos estudiantes de la plataforma de Next U para alcanzar sus certificaciones en tecnologia digital en campos de desarrollo web y marketing digital.",
+        "estrellas": 4
+      }
+    },
+    {
+      "id": 2,
+      "titulo": "a",
+      "detalles": "v",
+      "precio": "2",
+      "horas": "3",
+      "requisitos": "4",
+      "contenidos": "5"
+    }
+  ]
+}

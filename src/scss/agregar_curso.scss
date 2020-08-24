@@ -1,0 +1,24 @@
+@import "./components/master";
+
+// form {
+//   width: 50%;
+//   clear: both;
+// }
+.curso-campo,
+.carga-contenido > div {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contenido {
+  border: 3px solid black;
+  padding: 10px;
+
+  .opciones {
+    flex-direction: row;
+  }
+}
+label {
+  margin-bottom: 5px;
+}
