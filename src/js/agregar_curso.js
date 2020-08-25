@@ -21,14 +21,12 @@ const botonTematica = document.getElementsByClassName("boton-tematica");
 const botonBorrar = document.getElementsByClassName("boton-borrar");
 const agregarUnidad = document.getElementById("boton-contenido");
 let titulos = [];
-const json_cursos = "../admin/cursos.json";
+const json_cursos = "https://cursos-43982.firebaseio.com/cursos.json";
 const json_profesores = "../admin/profesores.json";
-// const json_cursos = "http://localhost:3000/cursos";
-// const json_profesores = "http://localhost:3000/profesores";
 
 formulario.reset();
 
-const existe = (dato) => {
+const lista_titulos = (dato) => {
   for (let curso of dato.cursos) {
     titulos.push(curso.titulo);
   }
@@ -93,8 +91,7 @@ profesores.addEventListener("change", () => {
                 agregarProfesor.innerHTML = "Profesor agregado";
               },
               (err) => {
-                // agregarProfesor.innerHTML = "Profesor NO agregado";
-                console.log(err);
+                throw new Error(err);
               }
             );
           }
@@ -139,7 +136,7 @@ agregarUnidad.addEventListener("click", () => {
   contenidos.appendChild(campos_clon);
 });
 
-extraerDatos(json_cursos, existe);
+extraerDatos(json_cursos, lista_titulos);
 extraerDatos(json_profesores, insertarProfesores);
 
 enviar.addEventListener("click", () => {

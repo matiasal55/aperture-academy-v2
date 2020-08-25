@@ -7,7 +7,7 @@ export const extraerDatos = (url, callback) => {
 };
 
 export const grabarDatos = (objeto, url, exitoso, erroneo) => {
-  fetch("http://localhost:3000/cursos", {
+  fetch(url, {
     method: "POST",
     body: JSON.stringify(objeto),
     headers: {
