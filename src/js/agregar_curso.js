@@ -22,7 +22,10 @@ const botonBorrar = document.getElementsByClassName("boton-borrar");
 const agregarUnidad = document.getElementById("boton-contenido");
 let titulos = [];
 const json_cursos = "https://cursos-43982.firebaseio.com/cursos.json";
-const json_profesores = "../admin/profesores.json";
+const json_profesores =
+  "https://profesores-9c2a7.firebaseio.com/profesores.json";
+// const json_cursos = "../admin/cursos.json";
+// const json_profesores = "../admin/profesores.json";
 
 formulario.reset();
 

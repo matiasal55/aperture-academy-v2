@@ -1,5 +1,6 @@
 export const extraerDatos = (url, callback) => {
   fetch(url)
+    .then((res) => (res.ok ? Promise.resolve(res) : Promise.reject(res)))
     .then((res) => res.json())
     .then((res) => {
       callback(res);
