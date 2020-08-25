@@ -21,6 +21,10 @@ const botonTematica = document.getElementsByClassName("boton-tematica");
 const botonBorrar = document.getElementsByClassName("boton-borrar");
 const agregarUnidad = document.getElementById("boton-contenido");
 let titulos = [];
+const json_cursos = "../admin/cursos.json";
+const json_profesores = "../admin/profesores.json";
+// const json_cursos = "http://localhost:3000/cursos";
+// const json_profesores = "http://localhost:3000/profesores";
 
 formulario.reset();
 
@@ -46,7 +50,6 @@ const insertarProfesores = (dato) => {
   const opcion = document.createElement("option");
   opcion.textContent = "Otro";
   profesores.appendChild(opcion);
-  console.log(profesores.length);
 };
 
 profesores.addEventListener("change", () => {
@@ -80,7 +83,7 @@ profesores.addEventListener("change", () => {
             };
             grabarDatos(
               nuevo,
-              "../admin/profesores",
+              json_profesores,
               () => {
                 const nuevaOpcion = document.createElement("option");
                 nuevaOpcion.setAttribute("name", `${nuevo.id}`);
@@ -97,7 +100,7 @@ profesores.addEventListener("change", () => {
           }
         }
       };
-      extraerDatos("../admin/profesores.json", existeProfesor);
+      extraerDatos(json_profesores, existeProfesor);
     });
   } else if (document.getElementsByClassName("nuevoProfesor")[0] != undefined)
     document.getElementsByClassName("nuevoProfesor")[0].remove();
@@ -136,8 +139,8 @@ agregarUnidad.addEventListener("click", () => {
   contenidos.appendChild(campos_clon);
 });
 
-extraerDatos("../admin/cursos.json", existe);
-extraerDatos("../admin/profesores.json", insertarProfesores);
+extraerDatos(json_cursos, existe);
+extraerDatos(json_profesores, insertarProfesores);
 
 enviar.addEventListener("click", () => {
   const maximo = 10;
@@ -167,7 +170,8 @@ enviar.addEventListener("click", () => {
           curso.contenidos.push(unidad);
         }
         grabarDatos(
-          "../admin/cursos",
+          curso,
+          json_cursos,
           () =>
             (enviar.parentElement.nextElementSibling.innerHTML =
               "Curso cargado"),
