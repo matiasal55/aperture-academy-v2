@@ -1,10 +1,8 @@
 export const extraerDatos = (url, callback) => {
   fetch(url)
-    .then((res) => (res.ok ? Promise.resolve(res) : Promise.reject(res)))
     .then((res) => res.json())
-    .then((res) => {
-      callback(res);
-    });
+    .then((res) => callback(res))
+    .catch((err) => console.log("No pudo ser"));
 };
 
 export const grabarDatos = (objeto, url, exitoso, erroneo) => {
