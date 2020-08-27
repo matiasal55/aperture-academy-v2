@@ -33,6 +33,10 @@ section > div {
   width: 100%;
 }
 
+a {
+  color: $color-a;
+}
+
 @import "header";
 @import "menu";
 @import "footer";

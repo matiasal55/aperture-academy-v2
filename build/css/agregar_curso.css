@@ -1,7 +1,3 @@
-a {
-  color: black;
-}
-
 * {
   font-family: "Open Sans", sans-serif;
   text-decoration: none;
@@ -33,6 +29,10 @@ section > div {
   text-align: center;
   padding: 30px 0px;
   width: 100%;
+}
+
+a {
+  color: black;
 }
 
 header {
@@ -67,10 +67,6 @@ header {
 }
 .header .carrito img {
   width: 50px;
-}
-
-a {
-  color: black;
 }
 
 nav {
@@ -200,6 +196,10 @@ footer .copyright i {
 
 label {
   margin-bottom: 5px;
+}
+
+.error {
+  color: red;
 }
 
 /*# sourceMappingURL=agregar_curso.css.map */

@@ -3,7 +3,7 @@
   <head>
     <title>Aperture Academy</title>
     <meta name="viewport" content="width=device-width, user-scalable=no"/>
-    <link rel="stylesheet" href="../css/agregar_curso.css"/>
+    <link rel="stylesheet" href="../css/agregar_profesor.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous"/>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&amp;display=swap" rel="stylesheet"/>
   </head>
@@ -48,69 +48,24 @@
     </nav>
     <section>
       <div>
-        <h1>Agregar Curso</h1>
+        <h1>Agregar Profesor</h1>
       </div>
       <div class="formulario">
         <form id="form">
           <div class="curso-campo">
-            <label for="titulo">Título: </label>
-            <input class="input" type="text" name="titulo" id="titulo-curso" placeholder="Ingrese el nombre del curso"/>
+            <label for="nombre">Nombre del profesor: </label>
+            <input class="input" type="text" name="nombre-profesor" id="nombre-profesor" placeholder="Ingrese el nombre del profesor"/>
             <div class="error"></div>
           </div>
           <div class="curso-campo">
-            <label for="detalles">Detalles: </label>
-            <input class="input" type="text" name="detalles" placeholder="Ingrese el detalle general del curso"/>
+            <label for="descripcion">Detalles: </label>
+            <input class="input" type="text" name="descripcion-profesor" id="descripcion-profesor" placeholder="Ingrese la descripcion"/>
             <div class="error"></div>
           </div>
           <div class="curso-campo">
-            <label for="precio">Precio: </label>
-            <input class="input" type="number" name="precio" placeholder="Ingrese el precio del curso"/>
+            <label for="estrellas">Estrellas: </label>
+            <input class="input" type="number" name="estrellas-profesor" id="estrellas-profesor" placeholder="Puntaje"/>
             <div class="error"></div>
-          </div>
-          <div class="curso-campo">
-            <label for="horas">Cantidad de horas: </label>
-            <input class="input" type="number" name="horas" placeholder="Ingrese la cantidad de horas totales del curso"/>
-            <div class="error"></div>
-          </div>
-          <div class="curso-campo">
-            <label for="requisitos">Requisitos: </label>
-            <input class="input" type="text" name="requisitos" placeholder="Ingrese los requisitos necesarios para hacer el curso"/>
-            <div class="error"></div>
-          </div>
-          <div class="curso-campo">
-            <label for="contenido">Contenidos: </label>
-            <div class="contenido">
-              <div class="carga-contenido">
-                <div class="unidad">
-                  <div class="titulo">
-                    <label for="unidad1-titulo">Titulo de la Unidad: </label>
-                    <input class="input unidad-titulo" type="text" placeholder="Ingrese el título de la unidad"/>
-                    <div class="error"></div>
-                  </div>
-                  <div class="tematicas">
-                    <div class="tematica">
-                      <label for="unidad1-tematica">Titulo de la temática de la unidad: </label>
-                      <input class="unidad-tematica" type="text" placeholder="Ingrese el título de la temática de la unidad"/>
-                    </div>
-                  </div>
-                  <div class="opciones">
-                    <input class="boton-tematica" type="button" value="Agregar temática" name="agregar"/>
-                    <input class="boton-borrar" type="button" value="Borrar unidad" name="borrar"/>
-                  </div>
-                </div>
-              </div>
-              <div class="agregar-contenido">
-                <input type="button" value="Agregar unidad" id="boton-contenido"/>
-              </div>
-            </div>
-          </div>
-          <div class="curso-campo">
-            <label for="profesor">Profesor: </label>
-            <select name="profesor" id="profesor">
-              <option value="default" selected="selected" disabled="disabled">Seleccione un profesor</option>
-            </select>
-            <div class="error"></div>
-            <div class="informacion-profesor"></div>
           </div>
           <div class="opciones-final">
             <div class="button">
@@ -139,6 +94,6 @@
         </div>
       </div>
     </footer>
-    <script src="../js/agregar_curso.js"></script>
+    <script src="../js/agregar_profesor.js"></script>
   </body>
 </html>

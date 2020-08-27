@@ -179,77 +179,14 @@ footer .copyright i {
     margin: 10px 0px;
   }
 }
-.detalles {
-  width: 40%;
-  display: flex;
-  justify-content: center;
-}
-.detalles .img img {
-  max-width: 200px;
-  margin-right: 30px;
-}
-.detalles .principal {
-  margin-bottom: 30px;
-}
-.detalles .contenidos h1 {
+.curso-campo {
   margin-bottom: 10px;
-}
-.detalles .contenidos div {
-  border: 3px solid #808080;
-  padding: 5px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.detalles .contenidos div i {
-  cursor: pointer;
-  font-size: 24px;
-}
-.detalles .contenidos ul {
-  list-style: none;
-  padding: 0;
-  margin: 10px 0;
-  display: none;
-}
-.detalles .contenidos .mostrar {
-  display: block;
-}
-.detalles input {
-  display: block;
-  width: 100%;
-  margin-top: 10px;
+  flex-direction: column;
 }
 
-.profesor {
-  width: 80%;
-  margin: 30px auto;
-  border: 5px solid black;
-  padding: 5px 20px;
-}
-.profesor div h2 {
-  margin-bottom: 10px;
-}
-.profesor div img {
-  width: 150px;
-  margin-right: 10px;
-}
-.profesor .descripcion {
-  display: flex;
-}
-.profesor .descripcion div p i {
-  color: goldenrod;
-  margin-bottom: 10px;
+.error {
+  color: red;
 }
 
-@media (max-device-width: 768px) {
-  .descripcion,
-.detalles {
-    flex-direction: column;
-  }
-
-  .detalles {
-    width: 90vw;
-  }
-}
-
-/*# sourceMappingURL=cursos_detalles.css.map */
+/*# sourceMappingURL=agregar_profesor.css.map */

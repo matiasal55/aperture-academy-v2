@@ -1,0 +1,29 @@
+extends ../../components/master
+
+block estilo
+    - estilos= "agregar_profesor"
+    - js="agregar_profesor"
+    - direccion=".."
+block content
+    section
+        div
+            h1 Agregar Profesor
+        .formulario
+            form#form
+                .curso-campo
+                    label(for="nombre") Nombre del profesor: 
+                    input(type="text" class="input" name="nombre-profesor" id="nombre-profesor" placeholder="Ingrese el nombre del profesor")
+                    .error
+                .curso-campo
+                    label(for="descripcion") Detalles: 
+                    input(type="text" class="input" name="descripcion-profesor" id="descripcion-profesor" placeholder="Ingrese la descripcion")
+                    .error
+                .curso-campo
+                    label(for="estrellas") Estrellas: 
+                    input(type="number" class="input" name="estrellas-profesor" id="estrellas-profesor" placeholder="Puntaje")
+                    .error
+                .opciones-final
+                    .button
+                        input(type="button" id="enviar", value="Enviar")
+                        input(type="reset", value="Restablecer")
+                    .error

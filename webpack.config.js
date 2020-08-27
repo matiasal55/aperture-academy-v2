@@ -12,6 +12,7 @@ module.exports = [
       inscripcion: "./src/js/inscripcion.js",
       contacto: "./src/js/contacto.js",
       agregar_curso: ["@babel/polyfill", "./src/js/agregar_curso.js"],
+      agregar_profesor: "./src/js/agregar_profesor.js",
     },
     output: {
       filename: "[name].js",

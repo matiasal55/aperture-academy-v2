@@ -1,9 +1,13 @@
-import { camposNoVacios } from "./components/validaciones";
 import { extraerDatos, grabarDatos } from "./components/fetch";
+import { mostrarCantidadInscripciones } from "./components/contadorCarrito";
+import menu_responsive from "./components/menuResponsive";
+import enviarDatos from "./components/enviar_datos";
+import { json_cursos, json_profesores } from "./components/links_db";
+import { cargar_profesor } from "./components/cargar_profesor";
 
 class Curso {
   constructor(titulo, detalles, precio, horas, requisitos, profesor) {
-    this.id = titulos.length + 1;
+    this.id = titulos_cursos.length + 1;
     this.titulo = titulo;
     this.detalles = detalles;
     this.precio = precio;
@@ -20,23 +24,22 @@ const profesores = document.getElementById("profesor");
 const botonTematica = document.getElementsByClassName("boton-tematica");
 const botonBorrar = document.getElementsByClassName("boton-borrar");
 const agregarUnidad = document.getElementById("boton-contenido");
-let titulos = [];
-const json_cursos = "https://cursos-43982.firebaseio.com/cursos.json";
-const json_profesores =
-  "https://profesores-9c2a7.firebaseio.com/profesores.json";
-// const json_cursos = "../admin/cursos.json";
-// const json_profesores = "../admin/profesores.json";
 
-formulario.reset();
+// formulario.reset();
 
-const lista_titulos = (dato) => {
-  for (let curso of dato.cursos) {
-    titulos.push(curso.titulo);
+let titulos_cursos = [];
+
+// Extrae los nombres de los cursos
+const enlistar_cursos = (dato) => {
+  for (let curso of dato) {
+    titulos_cursos.push(curso.titulo);
   }
 };
+extraerDatos(json_cursos, enlistar_cursos);
 
-const insertarProfesores = (dato) => {
-  for (let profesor of dato.profesores) {
+// Inserta los nombres de los profesores en el select de manera ordenada
+const insertarProfesores = (lista) => {
+  for (let profesor of lista) {
     const opcion = document.createElement("option");
     opcion.setAttribute("name", `${profesor.id}`);
     opcion.setAttribute("value", `${profesor.nombre}`);
@@ -53,55 +56,45 @@ const insertarProfesores = (dato) => {
   profesores.appendChild(opcion);
 };
 
+extraerDatos(json_profesores, insertarProfesores);
+
 profesores.addEventListener("change", () => {
   if (profesores.selectedIndex === profesores.length - 1) {
     const agregarProfesor = document.createElement("div");
     agregarProfesor.className = "nuevoProfesor";
     agregarProfesor.innerHTML =
-      "<label for='nombre'> Nombre del profesor: <input type='text' id='nombre-profesor' placeholder='Ingrese el nombre del profesor'>";
+      "<div class='curso-campo'><label for='nombre'> Nombre del profesor: <input type='text' class='input-profesor' id='nombre-profesor' placeholder='Ingrese el nombre del profesor'><div class='error'></div></div>";
     agregarProfesor.innerHTML +=
-      "<label for='descripcion'> Descripción: <input type='text' id='descripcion-profesor' placeholder='Ingrese la descripción'>";
+      "<div class='curso-campo'><label for='descripcion'> Descripción: <input type='text' class='input-profesor' id='descripcion-profesor' placeholder='Ingrese la descripción'><div class='error'></div></div>";
     agregarProfesor.innerHTML +=
-      "<label for='estrellas'> Estrellas: <input type='number' id='estrellas-profesor' placeholder='Puntaje'>";
+      "<div class='curso-campo'><label for='estrellas'> Estrellas: <input type='number' class='input-profesor' id='estrellas-profesor' placeholder='Puntaje'><div class='error'></div></div>";
     agregarProfesor.innerHTML +=
       "<input type='button' id='boton-profesor' value='Agregar profesor'>";
     profesores.parentElement.appendChild(agregarProfesor);
 
     const boton = document.getElementById("boton-profesor");
 
-    boton.addEventListener("click", () => {
-      const existeProfesor = (res) => {
-        for (let profesor of res.profesores) {
-          if (
-            profesor.nombre != document.getElementById("nombre-profesor").value
-          ) {
-            const nuevo = {
-              id: res.profesores.length + 1,
-              nombre: document.getElementById("nombre-profesor").value,
-              descripcion: document.getElementById("descripcion-profesor")
-                .value,
-              estrellas: document.getElementById("estrellas-profesor").value,
-            };
-            grabarDatos(
-              nuevo,
-              json_profesores,
-              () => {
-                const nuevaOpcion = document.createElement("option");
-                nuevaOpcion.setAttribute("name", `${nuevo.id}`);
-                nuevaOpcion.setAttribute("value", `${nuevo.nombre}`);
-                nuevaOpcion.textContent = `${nuevo.nombre}`;
-                profesores.appendChild(nuevaOpcion);
-                agregarProfesor.innerHTML = "Profesor agregado";
-              },
-              (err) => {
-                throw new Error(err);
-              }
-            );
-          }
-        }
-      };
-      extraerDatos(json_profesores, existeProfesor);
-    });
+    const insertarProfesor = (nuevo) => {
+      console.log(nuevo);
+      // const nuevaOpcion = document.createElement("option");
+      // nuevaOpcion.setAttribute("name", `${nuevo.id}`);
+      // nuevaOpcion.setAttribute("value", `${nuevo.nombre}`);
+      // nuevaOpcion.setAttribute("selected", "true");
+      // nuevaOpcion.textContent = `${nuevo.nombre}`;
+      // profesores.appendChild(nuevaOpcion);
+      // agregarProfesor.innerHTML = "Profesor agregado";
+    };
+
+    enviarDatos(
+      "profesor",
+      boton,
+      "input-profesor",
+      "nombre-profesor",
+      cargar_profesor,
+      json_profesores,
+      "nombre",
+      insertarProfesor
+    );
   } else if (document.getElementsByClassName("nuevoProfesor")[0] != undefined)
     document.getElementsByClassName("nuevoProfesor")[0].remove();
 });
@@ -139,51 +132,45 @@ agregarUnidad.addEventListener("click", () => {
   contenidos.appendChild(campos_clon);
 });
 
-extraerDatos(json_cursos, lista_titulos);
-extraerDatos(json_profesores, insertarProfesores);
+const cargar_curso = (campos, valores) => {
+  const campos_unidad = document.getElementsByClassName("unidad-titulo");
+  campos.splice(campos.length - campos_unidad.length);
+  for (let dato of campos) valores.push(dato.value);
 
-enviar.addEventListener("click", () => {
-  const maximo = 10;
-  const campos = [...document.getElementsByClassName("input")];
-  const titulo = document.getElementsByName("titulo")[0].value;
-  let valores = [];
-  if (camposNoVacios(...campos)) {
-    if (titulos.length < maximo) {
-      if (!titulos.includes(titulo)) {
-        const campos_unidad = document.getElementsByClassName("unidad-titulo");
-        campos.splice(campos.length - campos_unidad.length);
-        for (let dato of campos) valores.push(dato.value);
-        valores.push(profesores.value);
-        const curso = new Curso(...valores);
-        for (let campo of campos_unidad) {
-          const campos_tematicas = document.getElementsByClassName(
-            "unidad-tematica"
-          );
-          let tematicas = [];
-          for (let tematica of campos_tematicas) {
-            if (tematica.value != "") tematicas.push(tematica.value);
-          }
-          const unidad = {
-            titulo: campo.value,
-            tematicas: tematicas,
-          };
-          curso.contenidos.push(unidad);
-        }
-        grabarDatos(
-          curso,
-          json_cursos,
-          () =>
-            (enviar.parentElement.nextElementSibling.innerHTML =
-              "Curso cargado"),
-          (err) =>
-            (enviar.parentElement.nextElementSibling.innerHTML =
-              "No encuentra la base de datos. Contactar al supervisor")
-        );
-      } else
-        enviar.parentElement.nextElementSibling.innerHTML =
-          "Ya existe un curso con el mismo nombre";
-    } else
-      enviar.parentElement.nextElementSibling.innerHTML =
-        "Error: máximo de cursos cargados alcanzados. Contactese con un supervisor";
+  const extraer_profesor = (datos) => {
+    for (let dato of datos) {
+      const mapa = new Map(Object.entries(dato));
+      if (mapa.get("nombre") == profesores.value) {
+        valores.push(dato);
+        break;
+      }
+    }
+  };
+
+  extraerDatos(json_profesores, extraer_profesor);
+  debugger; // Sin el debugger no capta el objeto Profesor
+  const nuevo = new Curso(...valores);
+  for (let campo of campos_unidad) {
+    const campos_tematicas = document.getElementsByClassName("unidad-tematica");
+    let tematicas = [];
+    for (let tematica of campos_tematicas) {
+      if (tematica.value != "") tematicas.push(tematica.value);
+    }
+    const unidad = {
+      titulo: campo.value,
+      tematicas: tematicas,
+    };
+    nuevo.contenidos.push(unidad);
   }
-});
+  return nuevo;
+};
+
+enviarDatos(
+  "curso",
+  enviar,
+  "input",
+  "titulo-curso",
+  cargar_curso,
+  json_cursos,
+  "titulo"
+);
